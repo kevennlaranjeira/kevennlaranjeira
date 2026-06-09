@@ -2,9 +2,12 @@
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=190&section=header&text=Kevenn%20Laranjeira%20de%20Oliveira&fontSize=34&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Information%20Systems%20%7C%20Computer%20Science%20%7C%20Software%20Engineering&descAlignY=58&descSize=14)
 
+<!-- PROFILE:BADGES:START -->
 [![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=1f6feb&style=for-the-badge&label=VISITAS)](https://github.com/kevennlaranjeira)
 [![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Seguidores&color=2ea043)](https://github.com/kevennlaranjeira?tab=followers)
-[![GitHub repos](https://img.shields.io/badge/Reposit%C3%B3rios%20p%C3%BAblicos-4-8957e5?style=for-the-badge&logo=github)](https://github.com/kevennlaranjeira?tab=repositories)
+[![GitHub repos](https://img.shields.io/badge/Reposit%C3%B3rios%20p%C3%BAblicos-4-8957e5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
+[![Atualizado](https://img.shields.io/badge/Atualizado-2026--06--09-0969da?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
+<!-- PROFILE:BADGES:END -->
 
 </div>
 
@@ -51,19 +54,25 @@ Esses cards são dinâmicos e usam APIs/serviços de estatísticas do GitHub par
 
 ## Projetos em destaque
 
+<!-- PROFILE:PROJECTS:START -->
 <div align="center">
 
-<a href="https://github.com/kevennlaranjeira/VotoDistribu-do">
-  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=VotoDistribu-do&theme=github_dark&hide_border=true" alt="VotoDistribuido" />
+<a href="https://github.com/kevennlaranjeira/VotoDistribuido">
+  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=VotoDistribuido&theme=github_dark&hide_border=true" alt="VotoDistribuido" />
 </a>
+
 <a href="https://github.com/kevennlaranjeira/SortLab">
   <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=SortLab&theme=github_dark&hide_border=true" alt="SortLab" />
 </a>
+
 <a href="https://github.com/kevennlaranjeira/projeto_pdi">
   <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=projeto_pdi&theme=github_dark&hide_border=true" alt="projeto_pdi" />
 </a>
 
 </div>
+<!-- PROFILE:PROJECTS:END -->
+
+> Esta seção é atualizada automaticamente. Para escolher projetos fixos, edite `.github/profile-config.json` e preencha `featuredRepos`; se a lista ficar vazia, entram os repositórios mais recentes/atualizados.
 
 ## Atividade
 

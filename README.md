@@ -54,7 +54,7 @@ Esses cards são dinâmicos e usam APIs/serviços de estatísticas do GitHub par
 <div align="center">
 
 <a href="https://github.com/kevennlaranjeira/VotoDistribu-do">
-  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=VotoDistribu-do&theme=github_dark&hide_border=true" alt="VotoDistribu-do" />
+  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=VotoDistribu-do&theme=github_dark&hide_border=true" alt="VotoDistribuido" />
 </a>
 <a href="https://github.com/kevennlaranjeira/SortLab">
   <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=SortLab&theme=github_dark&hide_border=true" alt="SortLab" />

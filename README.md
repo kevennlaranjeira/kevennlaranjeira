@@ -13,16 +13,17 @@
 
 ## Sobre mim
 
-Olá! Eu sou **Kevenn Laranjeira de Oliveira**, bacharel em **Sistemas de Informação pela Universidade Federal de Viçosa (UFV)** e atualmente mestrando em **Ciência da Computação no PPG-CCMC pela Universidade de São Paulo (USP)**.
+Olá! Eu sou **Kevenn Laranjeira de Oliveira**, bacharel em **Sistemas de Informação pela Universidade Federal de Viçosa (UFV)** e atualmente mestrando em **Ciência da Computação no PPG-CCMC pela Universidade de São Paulo (USP)**, desenvolvendo minha pesquisa na área científica com foco em **Ciência de Dados**.
 
-Tenho interesse em construir software com base sólida em computação, combinando fundamentos de algoritmos, sistemas, processamento de dados e interfaces úteis. Pelos meus projetos públicos, venho explorando desde aplicações em **Java/TypeScript** até estudos em **C** e experimentos em **Python** voltados a processamento digital de imagens.
+Tenho interesse em construir software com base sólida em computação, combinando fundamentos de algoritmos, sistemas, bancos de dados, processamento de dados e interfaces úteis. Pelos meus projetos públicos, venho explorando desde aplicações em **Java/TypeScript** até estudos em **C/C++**, **SQL/PostgreSQL**, **Dart** e experimentos em **Python** voltados a processamento digital de imagens e dados.
 
 ## Áreas que aparecem nos meus projetos
 
 - **Sistemas e aplicações web:** estruturação de aplicações com Java, TypeScript, HTML, CSS e Docker.
-- **Algoritmos e desempenho:** implementação e análise em C, com Makefile e foco em organização experimental.
-- **Processamento digital de imagens:** experimentos em Python para manipulação e análise de imagens.
-- **Pesquisa em computação:** formação acadêmica orientada a investigação, leitura técnica e construção de soluções reproduzíveis.
+- **Bancos de dados e backend:** modelagem, consultas e persistência com SQL e PostgreSQL.
+- **Algoritmos e desempenho:** implementação e análise em C/C++, com Makefile e foco em organização experimental.
+- **Processamento e Ciência de Dados:** experimentos em Python para manipulação, análise e interpretação de dados e imagens.
+- **Pesquisa em computação:** formação acadêmica orientada a investigação científica, leitura técnica e construção de soluções reproduzíveis.
 
 ## Tecnologias
 
@@ -31,7 +32,11 @@ Tenho interesse em construir software com base sólida em computação, combinan
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)

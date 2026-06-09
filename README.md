@@ -50,7 +50,7 @@ Tenho interesse em construir software com base sólida em computação, combinan
 
 </div>
 
-Esses cards são dinâmicos e usam APIs/serviços de estatísticas do GitHub para refletir a distribuição de linguagens dos meus repositórios públicos.
+
 
 ## Projetos em destaque
 
@@ -72,7 +72,6 @@ Esses cards são dinâmicos e usam APIs/serviços de estatísticas do GitHub par
 </div>
 <!-- PROFILE:PROJECTS:END -->
 
-> Esta seção é atualizada automaticamente. Para escolher projetos fixos, edite `.github/profile-config.json` e preencha `featuredRepos`; se a lista ficar vazia, entram os repositórios mais recentes/atualizados.
 
 ## Atividade
 

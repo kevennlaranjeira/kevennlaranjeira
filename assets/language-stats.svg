@@ -1,0 +1,118 @@
+<svg width="920" height="370" viewBox="0 0 920 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Linguagens nos repositórios</title>
+  <desc id="desc">Métricas atualizadas automaticamente pela GitHub API</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="920" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="accent" x1="42" y1="64" x2="570" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2ea043" />
+      <stop offset="1" stop-color="#1f6feb" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#010409" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .title { font: 700 26px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
+      .subtitle { font: 500 13px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
+      .section { font: 700 15px 'Segoe UI', Ubuntu, sans-serif; fill: #58a6ff; }
+      .lang-name { font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
+      .lang-percent { font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; text-anchor: end; }
+      .muted { font: 500 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
+      .metric-label { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
+      .metric-value { font: 800 17px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
+      .footer { font: 500 11px 'Segoe UI', Ubuntu, sans-serif; fill: #6e7681; }
+    </style>
+  </defs>
+  <rect width="920" height="370" rx="18" fill="url(#card)" />
+  <rect x="18" y="18" width="884" height="334" rx="14" fill="#0d1117" stroke="#30363d" filter="url(#softShadow)" />
+  <text x="42" y="52" class="title">Linguagens nos repositórios</text>
+  <text x="42" y="76" class="subtitle">Métricas atualizadas automaticamente pela GitHub API</text>
+  <rect x="42" y="91" width="520" height="3" rx="1.5" fill="url(#accent)" />
+  <text x="42" y="104" class="section">Linguagens</text>
+  <text x="630" y="104" class="section">Resumo</text>
+  
+  <g transform="translate(42 108)">
+    <circle cx="7" cy="7" r="5" fill="#b07219" />
+    <text x="22" y="11" class="lang-name">Java</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="91" height="12" rx="6" fill="#b07219" />
+    <text x="422" y="11" class="lang-percent">35.7%</text>
+    <text x="496" y="11" class="muted">41.307 bytes</text>
+  </g>
+  <g transform="translate(42 136)">
+    <circle cx="7" cy="7" r="5" fill="#555555" />
+    <text x="22" y="11" class="lang-name">C</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="74" height="12" rx="6" fill="#555555" />
+    <text x="422" y="11" class="lang-percent">29.1%</text>
+    <text x="496" y="11" class="muted">33.624 bytes</text>
+  </g>
+  <g transform="translate(42 164)">
+    <circle cx="7" cy="7" r="5" fill="#3572A5" />
+    <text x="22" y="11" class="lang-name">Python</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="42" height="12" rx="6" fill="#3572A5" />
+    <text x="422" y="11" class="lang-percent">16.5%</text>
+    <text x="496" y="11" class="muted">19.088 bytes</text>
+  </g>
+  <g transform="translate(42 192)">
+    <circle cx="7" cy="7" r="5" fill="#3178c6" />
+    <text x="22" y="11" class="lang-name">TypeScript</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="26" height="12" rx="6" fill="#3178c6" />
+    <text x="422" y="11" class="lang-percent">10.1%</text>
+    <text x="496" y="11" class="muted">11.687 bytes</text>
+  </g>
+  <g transform="translate(42 220)">
+    <circle cx="7" cy="7" r="5" fill="#563d7c" />
+    <text x="22" y="11" class="lang-name">CSS</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="11" height="12" rx="6" fill="#563d7c" />
+    <text x="422" y="11" class="lang-percent">4.3%</text>
+    <text x="496" y="11" class="muted">4.983 bytes</text>
+  </g>
+  <g transform="translate(42 248)">
+    <circle cx="7" cy="7" r="5" fill="#e34c26" />
+    <text x="22" y="11" class="lang-name">HTML</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="8" height="12" rx="6" fill="#e34c26" />
+    <text x="422" y="11" class="lang-percent">3.0%</text>
+    <text x="496" y="11" class="muted">3.522 bytes</text>
+  </g>
+  <g transform="translate(42 276)">
+    <circle cx="7" cy="7" r="5" fill="#384d54" />
+    <text x="22" y="11" class="lang-name">Dockerfile</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="5" height="12" rx="6" fill="#384d54" />
+    <text x="422" y="11" class="lang-percent">0.8%</text>
+    <text x="496" y="11" class="muted">914 bytes</text>
+  </g>
+  <g transform="translate(42 304)">
+    <circle cx="7" cy="7" r="5" fill="#427819" />
+    <text x="22" y="11" class="lang-name">Makefile</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="5" height="12" rx="6" fill="#427819" />
+    <text x="422" y="11" class="lang-percent">0.4%</text>
+    <text x="496" y="11" class="muted">442 bytes</text>
+  </g>
+  
+  <g transform="translate(630 121)">
+    <text x="0" y="0" class="metric-label">Commits públicos</text>
+    <text x="0" y="22" class="metric-value">13</text>
+  </g>
+  <g transform="translate(630 179)">
+    <text x="0" y="0" class="metric-label">Último commit</text>
+    <text x="0" y="22" class="metric-value">VotoDistribuido · 09/06/2026 17:4…</text>
+  </g>
+  <g transform="translate(630 237)">
+    <text x="0" y="0" class="metric-label">Repo mais recente</text>
+    <text x="0" y="22" class="metric-value">VotoDistribuido</text>
+  </g>
+  <g transform="translate(630 295)">
+    <text x="0" y="0" class="metric-label">Atualizado em</text>
+    <text x="0" y="22" class="metric-value">13/06/2026</text>
+  </g>
+  <text x="42" y="334" class="footer">A Action roda de hora em hora e também pode ser executada manualmente.</text>
+</svg>

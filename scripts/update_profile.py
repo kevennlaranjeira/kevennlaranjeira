@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import html
 import json
 import os
 import re
@@ -17,6 +18,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / ".github" / "profile-config.json"
+ASSETS = ROOT / "assets"
 READMES = {
     "pt": ROOT / "README.md",
     "en": ROOT / "README.en.md",
@@ -273,66 +275,139 @@ def language_bar(percent: float) -> str:
     return "█" * filled + "░" * (20 - filled)
 
 
-def render_language_metrics(username: str, metrics: dict, locale: str) -> str:
+def short_text(value: str, max_length: int) -> str:
+    if len(value) <= max_length:
+        return value
+    return value[: max_length - 1].rstrip() + "…"
+
+
+def svg_text(value: object) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def render_language_svg(metrics: dict, locale: str) -> str:
     language_totals = metrics["language_totals"]
     total_bytes = sum(language_totals.values())
     latest = metrics["latest_commit"]
     last_repo = metrics["last_updated_repo"]
     generated_at = metrics["generated_at"]
+    top_languages = sorted(language_totals.items(), key=lambda item: item[1], reverse=True)[:8]
 
     if locale == "pt":
-        metric_header = ("Métrica", "Valor")
-        lang_header = ("Linguagem", "Uso", "Bytes")
-        total_commits_label = "Commits públicos nas branches padrão"
-        latest_commit_label = "Último commit público"
-        latest_repo_label = "Repositório atualizado mais recentemente"
-        generated_label = "Seção atualizada em"
+        title = "Linguagens nos repositórios"
+        subtitle = "Métricas atualizadas automaticamente pela GitHub API"
+        commit_label = "Commits públicos"
+        latest_label = "Último commit"
+        repo_label = "Repo mais recente"
+        updated_label = "Atualizado em"
         empty_latest = "Sem commits públicos encontrados"
-        note = "Métricas geradas automaticamente pela GitHub API; a Action roda de hora em hora e também pode ser executada manualmente."
+        footer = "A Action roda de hora em hora e também pode ser executada manualmente."
     else:
-        metric_header = ("Metric", "Value")
-        lang_header = ("Language", "Usage", "Bytes")
-        total_commits_label = "Public commits on default branches"
-        latest_commit_label = "Latest public commit"
-        latest_repo_label = "Most recently updated repository"
-        generated_label = "Section updated at"
+        title = "Repository languages"
+        subtitle = "Metrics updated automatically from the GitHub API"
+        commit_label = "Public commits"
+        latest_label = "Latest commit"
+        repo_label = "Latest repo"
+        updated_label = "Updated at"
         empty_latest = "No public commits found"
-        note = "Metrics generated automatically from the GitHub API; the Action runs hourly and can also be triggered manually."
+        footer = "The Action runs hourly and can also be triggered manually."
 
     if latest:
-        latest_text = f"[{latest['repo']['name']}]({latest['url']}) · {format_datetime_br(latest['date'], locale)}"
+        latest_text = f"{latest['repo']['name']} · {format_datetime_br(latest['date'], locale)}"
     else:
         latest_text = empty_latest
 
-    metric_rows = [
-        f"| {total_commits_label} | {format_int(metrics['total_commits'], locale)} |",
-        f"| {latest_commit_label} | {latest_text} |",
-        f"| {latest_repo_label} | [{last_repo['name']}]({last_repo['html_url']}) |",
-        f"| {generated_label} | {format_generated_date(generated_at)} |",
+    metric_items = [
+        (commit_label, format_int(metrics["total_commits"], locale)),
+        (latest_label, latest_text),
+        (repo_label, last_repo["name"]),
+        (updated_label, format_generated_date(generated_at)),
     ]
 
-    language_rows: list[str] = []
-    for language, bytes_count in sorted(language_totals.items(), key=lambda item: item[1], reverse=True)[:10]:
+    lang_rows: list[str] = []
+    y = 108
+    for language, bytes_count in top_languages:
         percent = (bytes_count / total_bytes * 100) if total_bytes else 0
-        color = LANG_COLORS.get(language, "6e7681")
-        label = urllib.parse.quote(language, safe="")
-        message = urllib.parse.quote(f"{percent:.1f}%".replace("-", "--"), safe="")
-        badge = f"https://img.shields.io/badge/{label}-{message}-{color}?style=flat-square"
-        language_rows.append(
-            f"| ![{language}]({badge}) | `{language_bar(percent)}` {percent:.1f}% | {format_bytes(bytes_count, locale)} |"
+        color = "#" + LANG_COLORS.get(language, "6e7681")
+        bar_width = max(5, round(percent * 2.55))
+        lang_rows.append(
+            f"""
+  <g transform="translate(42 {y})">
+    <circle cx="7" cy="7" r="5" fill="{color}" />
+    <text x="22" y="11" class="lang-name">{svg_text(language)}</text>
+    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
+    <rect x="150" y="1" width="{bar_width}" height="12" rx="6" fill="{color}" />
+    <text x="422" y="11" class="lang-percent">{percent:.1f}%</text>
+    <text x="496" y="11" class="muted">{svg_text(format_bytes(bytes_count, locale))}</text>
+  </g>"""
         )
+        y += 28
 
+    metric_rows: list[str] = []
+    metric_y = 121
+    for label, value in metric_items:
+        metric_rows.append(
+            f"""
+  <g transform="translate(630 {metric_y})">
+    <text x="0" y="0" class="metric-label">{svg_text(label)}</text>
+    <text x="0" y="22" class="metric-value">{svg_text(short_text(value, 34))}</text>
+  </g>"""
+        )
+        metric_y += 58
+
+    return f"""<svg width="920" height="370" viewBox="0 0 920 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">{svg_text(title)}</title>
+  <desc id="desc">{svg_text(subtitle)}</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="920" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="accent" x1="42" y1="64" x2="570" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2ea043" />
+      <stop offset="1" stop-color="#1f6feb" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#010409" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .title {{ font: 700 26px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }}
+      .subtitle {{ font: 500 13px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }}
+      .section {{ font: 700 15px 'Segoe UI', Ubuntu, sans-serif; fill: #58a6ff; }}
+      .lang-name {{ font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }}
+      .lang-percent {{ font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; text-anchor: end; }}
+      .muted {{ font: 500 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }}
+      .metric-label {{ font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }}
+      .metric-value {{ font: 800 17px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }}
+      .footer {{ font: 500 11px 'Segoe UI', Ubuntu, sans-serif; fill: #6e7681; }}
+    </style>
+  </defs>
+  <rect width="920" height="370" rx="18" fill="url(#card)" />
+  <rect x="18" y="18" width="884" height="334" rx="14" fill="#0d1117" stroke="#30363d" filter="url(#softShadow)" />
+  <text x="42" y="52" class="title">{svg_text(title)}</text>
+  <text x="42" y="76" class="subtitle">{svg_text(subtitle)}</text>
+  <rect x="42" y="91" width="520" height="3" rx="1.5" fill="url(#accent)" />
+  <text x="42" y="104" class="section">{svg_text('Linguagens' if locale == 'pt' else 'Languages')}</text>
+  <text x="630" y="104" class="section">{svg_text('Resumo' if locale == 'pt' else 'Summary')}</text>
+  {''.join(lang_rows)}
+  {''.join(metric_rows)}
+  <text x="42" y="334" class="footer">{svg_text(footer)}</text>
+</svg>
+"""
+
+
+def render_language_metrics(username: str, metrics: dict, locale: str) -> str:
+    asset = "assets/language-stats.svg" if locale == "pt" else "assets/language-stats-en.svg"
+    alt = (
+        "Métricas automáticas de linguagens e commits"
+        if locale == "pt"
+        else "Automatic language and commit metrics"
+    )
     return "\n".join(
         [
-            f"| {metric_header[0]} | {metric_header[1]} |",
-            "|---|---|",
-            *metric_rows,
-            "",
-            f"| {lang_header[0]} | {lang_header[1]} | {lang_header[2]} |",
-            "|---|---:|---:|",
-            *language_rows,
-            "",
-            f"> {note}",
+            '<div align="center">',
+            f'  <img src="{asset}" alt="{alt}" width="100%" />',
+            "</div>",
         ]
     )
 
@@ -374,6 +449,20 @@ def update_readme(path: Path, locale: str, username: str, user: dict, projects: 
     path.write_text(readme, encoding="utf-8", newline="\n")
 
 
+def write_language_assets(metrics: dict) -> None:
+    ASSETS.mkdir(exist_ok=True)
+    (ASSETS / "language-stats.svg").write_text(
+        render_language_svg(metrics, "pt"),
+        encoding="utf-8",
+        newline="\n",
+    )
+    (ASSETS / "language-stats-en.svg").write_text(
+        render_language_svg(metrics, "en"),
+        encoding="utf-8",
+        newline="\n",
+    )
+
+
 def main() -> int:
     config = load_config()
     username = config.get("username", "kevennlaranjeira")
@@ -382,6 +471,7 @@ def main() -> int:
     repos = fetch_repos(username)
     projects = select_projects(config, repos)
     metrics = collect_metrics(username, repos, excluded)
+    write_language_assets(metrics)
 
     for locale, path in READMES.items():
         update_readme(path, locale, username, user, projects, metrics)

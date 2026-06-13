@@ -1,9 +1,13 @@
+<div align="right">
+  <sub><strong>Trocar idioma</strong><br><em>Change language</em></sub><br>
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/Ler%20em-PT--BR-2ea043?style=for-the-badge" alt="Ler em PT-BR" />
+  </a>
+</div>
+
 <div align="center">
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=190&section=header&text=Kevenn%20Laranjeira%20de%20Oliveira&fontSize=34&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Information%20Systems%20%7C%20Computer%20Science%20%7C%20Software%20Engineering&descAlignY=58&descSize=14)
-
-[![Português](https://img.shields.io/badge/Idioma-PT--BR-2ea043?style=for-the-badge)](README.md)
-[![English](https://img.shields.io/badge/Language-English-1f6feb?style=for-the-badge)](README.en.md)
 
 <!-- PROFILE:BADGES:START -->
 [![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=1f6feb&style=for-the-badge&label=VIEWS)](https://github.com/kevennlaranjeira)
@@ -52,25 +56,9 @@ I am interested in building software on a solid computing foundation, combining 
 ## Repository languages
 
 <!-- PROFILE:LANG_STATS:START -->
-| Metric | Value |
-|---|---|
-| Public commits on default branches | 13 |
-| Latest public commit | [VotoDistribuido](https://github.com/kevennlaranjeira/VotoDistribuido/commit/d188e68cc6d5a23bf99d67d505a691865f5efb22) · 09/06/2026 17:42 BRT |
-| Most recently updated repository | [VotoDistribuido](https://github.com/kevennlaranjeira/VotoDistribuido) |
-| Section updated at | 13/06/2026 |
-
-| Language | Usage | Bytes |
-|---|---:|---:|
-| ![Java](https://img.shields.io/badge/Java-35.7%25-b07219?style=flat-square) | `███████░░░░░░░░░░░░░` 35.7% | 41,307 bytes |
-| ![C](https://img.shields.io/badge/C-29.1%25-555555?style=flat-square) | `██████░░░░░░░░░░░░░░` 29.1% | 33,624 bytes |
-| ![Python](https://img.shields.io/badge/Python-16.5%25-3572A5?style=flat-square) | `███░░░░░░░░░░░░░░░░░` 16.5% | 19,088 bytes |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-10.1%25-3178c6?style=flat-square) | `██░░░░░░░░░░░░░░░░░░` 10.1% | 11,687 bytes |
-| ![CSS](https://img.shields.io/badge/CSS-4.3%25-563d7c?style=flat-square) | `█░░░░░░░░░░░░░░░░░░░` 4.3% | 4,983 bytes |
-| ![HTML](https://img.shields.io/badge/HTML-3.0%25-e34c26?style=flat-square) | `█░░░░░░░░░░░░░░░░░░░` 3.0% | 3,522 bytes |
-| ![Dockerfile](https://img.shields.io/badge/Dockerfile-0.8%25-384d54?style=flat-square) | `█░░░░░░░░░░░░░░░░░░░` 0.8% | 914 bytes |
-| ![Makefile](https://img.shields.io/badge/Makefile-0.4%25-427819?style=flat-square) | `█░░░░░░░░░░░░░░░░░░░` 0.4% | 442 bytes |
-
-> Metrics generated automatically from the GitHub API; the Action runs hourly and can also be triggered manually.
+<div align="center">
+  <img src="assets/language-stats-en.svg" alt="Automatic language and commit metrics" width="100%" />
+</div>
 <!-- PROFILE:LANG_STATS:END -->
 
 ## Featured projects

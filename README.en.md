@@ -13,7 +13,7 @@
 [![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=1f6feb&style=for-the-badge&label=VIEWS)](https://github.com/kevennlaranjeira)
 [![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Followers&color=2ea043)](https://github.com/kevennlaranjeira?tab=followers)
 [![GitHub repos](https://img.shields.io/badge/Public%20repositories-4-8957e5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
-[![Updated](https://img.shields.io/badge/Updated-30%2F07%2F2026-0969da?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
+[![Updated](https://img.shields.io/badge/Updated-31%2F07%2F2026-0969da?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
 <!-- PROFILE:BADGES:END -->
 
 </div>

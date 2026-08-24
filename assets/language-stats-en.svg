@@ -112,7 +112,7 @@
   </g>
   <g transform="translate(630 295)">
     <text x="0" y="0" class="metric-label">Updated at</text>
-    <text x="0" y="22" class="metric-value">23/08/2026</text>
+    <text x="0" y="22" class="metric-value">24/08/2026</text>
   </g>
   <text x="42" y="334" class="footer">The Action runs hourly and can also be triggered manually.</text>
 </svg>

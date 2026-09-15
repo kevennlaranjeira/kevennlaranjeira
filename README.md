@@ -1,57 +1,45 @@
 <div align="right">
-  <sub><strong>Trocar idioma</strong><br><em>Switch language</em></sub><br>
   <a href="README.en.md">
-    <img src="https://img.shields.io/badge/Read%20in-English-1f6feb?style=for-the-badge" alt="Read in English" />
+    <img src="https://img.shields.io/badge/Read%20in-English-1f6feb?style=for-the-badge&labelColor=161b22" alt="Read in English" />
   </a>
 </div>
 
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,100:2ea043&height=190&section=header&text=Kevenn%20Laranjeira%20de%20Oliveira&fontSize=34&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Information%20Systems%20%7C%20Computer%20Science%20%7C%20Software%20Engineering&descAlignY=58&descSize=14)
+<img src="assets/header.svg" width="100%" alt="Kevenn Laranjeira de Oliveira, mestrando em Ciência da Computação e pesquisador na USP" />
 
 <!-- PROFILE:BADGES:START -->
-[![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=1f6feb&style=for-the-badge&label=VISITAS)](https://github.com/kevennlaranjeira)
-[![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Seguidores&color=2ea043)](https://github.com/kevennlaranjeira?tab=followers)
-[![GitHub repos](https://img.shields.io/badge/Reposit%C3%B3rios%20p%C3%BAblicos-4-8957e5?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
-[![Atualizado](https://img.shields.io/badge/Atualizado-15%2F09%2F2026-0969da?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
+[![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=3fb950&style=for-the-badge&label=VISITAS)](https://github.com/kevennlaranjeira)
+[![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Seguidores&color=2ea043&labelColor=161b22)](https://github.com/kevennlaranjeira?tab=followers)
+[![GitHub repos](https://img.shields.io/badge/Reposit%C3%B3rios%20p%C3%BAblicos-4-d29922?style=for-the-badge&labelColor=161b22&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
+[![Atualizado](https://img.shields.io/badge/Atualizado-15%2F09%2F2026-1f6feb?style=for-the-badge&labelColor=161b22&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
 <!-- PROFILE:BADGES:END -->
 
 </div>
 
 ## Sobre mim
 
-Olá! Eu sou **Kevenn Laranjeira de Oliveira**, bacharel em **Sistemas de Informação pela Universidade Federal de Viçosa (UFV)** e atualmente mestrando em **Ciência da Computação no PPG-CCMC pela Universidade de São Paulo (USP)**, desenvolvendo minha pesquisa na área científica com foco em **Ciência de Dados**.
+<img src="assets/terminal.svg" width="100%" alt="Terminal animado: Kevenn Laranjeira de Oliveira, mestrando e pesquisador em Ciência da Computação na USP São Carlos, bacharel em Sistemas de Informação pela UFV" />
 
-Tenho interesse em construir software com base sólida em computação, combinando fundamentos de algoritmos, sistemas, bancos de dados, processamento de dados e interfaces úteis. Pelos meus projetos públicos, venho explorando desde aplicações em **Java/TypeScript** até estudos em **C/C++**, **SQL/PostgreSQL**, **Dart** e experimentos em **Python** voltados a processamento digital de imagens e dados.
+Sou mestrando em Ciência da Computação e pesquisador na USP, em São Carlos. Antes disso me formei em Sistemas de Informação na Universidade Federal de Viçosa (UFV).
 
-## Áreas que aparecem nos meus projetos
-
-- **Sistemas e aplicações web:** estruturação de aplicações com Java, TypeScript, HTML, CSS e Docker.
-- **Bancos de dados e backend:** modelagem, consultas e persistência com SQL e PostgreSQL.
-- **Algoritmos e desempenho:** implementação e análise em C/C++, com Makefile e foco em organização experimental.
-- **Processamento e Ciência de Dados:** experimentos em Python para manipulação, análise e interpretação de dados e imagens.
-- **Pesquisa em computação:** formação acadêmica orientada a investigação científica, leitura técnica e construção de soluções reproduzíveis.
+Aprendo melhor construindo. Pego a teoria, transformo em código, meço o resultado e vou ajustando até a solução ficar clara para quem vier depois. Nos repositórios abertos aqui tem um sistema de votação em Java e TypeScript rodando em Docker, um laboratório de algoritmos de ordenação em C e uma aplicação de processamento de imagens em Python.
 
 ## Tecnologias
 
+<img src="assets/stack.svg" width="100%" alt="Linguagens: Python, Java, C, C++, TypeScript, JavaScript e Dart. Web, dados e infra: HTML, CSS, Node.js, PostgreSQL e Docker. Ferramentas: Git, GitHub, GitHub Actions, LaTeX e Makefile." />
+
+## Projetos em destaque
+
+<!-- PROFILE:PROJECTS:START -->
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Makefile](https://img.shields.io/badge/Makefile-427819?style=for-the-badge&logo=gnu&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+<a href="https://github.com/kevennlaranjeira/VotoDistribuido"><img src="assets/projects/VotoDistribuido.svg" width="48%" alt="VotoDistribuido" /></a>
+<a href="https://github.com/kevennlaranjeira/SortLab"><img src="assets/projects/SortLab.svg" width="48%" alt="SortLab" /></a>
+<a href="https://github.com/kevennlaranjeira/projeto_pdi"><img src="assets/projects/projeto_pdi.svg" width="48%" alt="projeto_pdi" /></a>
 
 </div>
+<!-- PROFILE:PROJECTS:END -->
 
 ## Linguagens nos repositórios
 
@@ -61,41 +49,40 @@ Tenho interesse em construir software com base sólida em computação, combinan
 </div>
 <!-- PROFILE:LANG_STATS:END -->
 
-## Projetos em destaque
+## Jogo da velha
 
-<!-- PROFILE:PROJECTS:START -->
-<div align="center">
-
-<a href="https://github.com/kevennlaranjeira/VotoDistribuido">
-  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=VotoDistribuido&theme=github_dark&hide_border=true" alt="VotoDistribuido" />
-</a>
-
-<a href="https://github.com/kevennlaranjeira/SortLab">
-  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=SortLab&theme=github_dark&hide_border=true" alt="SortLab" />
-</a>
-
-<a href="https://github.com/kevennlaranjeira/projeto_pdi">
-  <img height="125" src="https://github-readme-stats.vercel.app/api/pin/?username=kevennlaranjeira&repo=projeto_pdi&theme=github_dark&hide_border=true" alt="projeto_pdi" />
-</a>
-
-</div>
-<!-- PROFILE:PROJECTS:END -->
-
-
-## Atividade
+Você joga com X contra o bot. Clique numa casa livre e o GitHub abre uma issue já preenchida, aí é só confirmar. Em menos de um minuto o bot responde e o tabuleiro abaixo muda. A partida é coletiva, então quem chegar depois continua de onde você parou. O bot erra de vez em quando, dá para ganhar dele.
 
 <div align="center">
 
-![GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=kevennlaranjeira&theme=github-dark&hide_border=true&area=true)
+<!-- PROFILE:GAME:START -->
+<p><code>Partida #1 · sua vez, você joga com X</code></p>
+
+<table>
+  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C1&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-1.svg" width="84" alt="casa 1 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C2&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-2.svg" width="84" alt="casa 2 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C3&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-3.svg" width="84" alt="casa 3 livre" /></a></td></tr>
+  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C4&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-4.svg" width="84" alt="casa 4 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C5&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-5.svg" width="84" alt="casa 5 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C6&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-6.svg" width="84" alt="casa 6 livre" /></a></td></tr>
+  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C7&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-7.svg" width="84" alt="casa 7 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C8&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-8.svg" width="84" alt="casa 8 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C9&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-9.svg" width="84" alt="casa 9 livre" /></a></td></tr>
+</table>
+
+<p>Placar geral: visitantes <b>0</b> · bot <b>0</b> · empates <b>0</b></p>
+
+<p><sub>Ninguém entrou no ranking ainda.</sub></p>
+<!-- PROFILE:GAME:END -->
 
 </div>
 
-## Em resumo
-
-Gosto de aprender construindo: transformar teoria em código, medir resultados, melhorar a solução e deixar o projeto mais claro para quem vier depois. No momento, minha trajetória junta **formação acadêmica**, **desenvolvimento de software** e **pesquisa em Ciência da Computação**.
+## Contribuições
 
 <div align="center">
-
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:2ea043,100:1f6feb&height=110&section=footer)
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kevennlaranjeira/kevennlaranjeira/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kevennlaranjeira/kevennlaranjeira/output/github-snake.svg" />
+    <img alt="Cobrinha comendo o gráfico de contribuições" src="https://raw.githubusercontent.com/kevennlaranjeira/kevennlaranjeira/output/github-snake-dark.svg" />
+  </picture>
 </div>
+
+## Contato
+
+<a href="mailto:kevennlaranjeira@gmail.com"><img src="https://img.shields.io/badge/E--mail-kevennlaranjeira%40gmail.com-f0b429?style=for-the-badge&logo=gmail&logoColor=white&labelColor=161b22" alt="E-mail: kevennlaranjeira@gmail.com" /></a>
+
+<img src="assets/footer.svg" width="100%" alt="" />

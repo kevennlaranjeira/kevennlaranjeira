@@ -51,7 +51,10 @@ CONTENT = {
             ),
             (
                 "ls interesses/",
-                [("algoritmos/  backend/  bancos-de-dados/  processamento-de-imagens/  automação/", "dir")],
+                [
+                    ("algoritmos/  arquiteturas/  backend/  bancos-de-dados/", "dir"),
+                    ("integração-de-dados/  processamento-de-imagens/  automação/", "dir"),
+                ],
             ),
             ("echo $EMAIL", [("kevennlaranjeira@gmail.com", "accent")]),
         ],
@@ -80,7 +83,10 @@ CONTENT = {
             ),
             (
                 "ls interests/",
-                [("algorithms/  backend/  databases/  image-processing/  automation/", "dir")],
+                [
+                    ("algorithms/  architectures/  backend/  databases/", "dir"),
+                    ("data-integration/  image-processing/  automation/", "dir"),
+                ],
             ),
             ("echo $EMAIL", [("kevennlaranjeira@gmail.com", "accent")]),
         ],
@@ -486,75 +492,293 @@ def render_footer() -> str:
 
 
 # ---------------------------------------------------------------------------
-# Tic-tac-toe pieces
+# Sorting race
 # ---------------------------------------------------------------------------
 
+RACE_VALUES = [12, 10, 11, 5, 6, 14, 13, 4, 9, 2, 8, 1, 3, 7]
+RACE_TEXT = {
+    "pt": {
+        "title": "Corrida de ordenação",
+        "subtitle": "mesmo vetor embaralhado · cada comparação e cada troca levam o mesmo tempo",
+        "place": "{place}º lugar · {ops} operações",
+    },
+    "en": {
+        "title": "Sorting race",
+        "subtitle": "same shuffled array · every comparison and every swap takes the same time",
+        "place": "{place} place · {ops} operations",
+    },
+}
+ORDINALS_EN = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th"}
 
-def tile_frame(win: bool) -> str:
-    fill = "#0f2417" if win else PALETTE["tile"]
-    stroke = PALETTE["green"] if win else PALETTE["line"]
-    stroke_width = 2 if win else 1.2
-    return f'<rect x="3" y="3" width="90" height="90" rx="16" fill="{fill}" stroke="{stroke}" stroke-width="{stroke_width}" />'
-
-
-def render_piece(kind: str, win: bool = False) -> str:
-    if kind == "x":
-        color = PALETTE["amber"]
-        length = 50.9
-        mark = f"""
-  <path d="M30 30 L66 66" stroke="{color}" stroke-width="9" stroke-linecap="round" stroke-dasharray="{length}">
-    <animate attributeName="stroke-dashoffset" values="{length};0" dur="0.3s" />
-  </path>
-  <path d="M66 30 L30 66" stroke="{color}" stroke-width="9" stroke-linecap="round" stroke-dasharray="{length}">
-    <animate attributeName="stroke-dashoffset" values="{length};{length};0" keyTimes="0;0.5;1" dur="0.6s" />
-  </path>"""
-        title = "X"
-    else:
-        color = PALETTE["blue"]
-        length = 119.4
-        mark = f"""
-  <circle cx="48" cy="48" r="19" stroke="{color}" stroke-width="9" stroke-dasharray="{length}" transform="rotate(-90 48 48)">
-    <animate attributeName="stroke-dashoffset" values="{length};0" dur="0.5s" />
-  </circle>"""
-        title = "O"
-    glow = ""
-    if win:
-        glow = f"""
-  <rect x="3" y="3" width="90" height="90" rx="16" stroke="{PALETTE['green']}" stroke-width="2">
-    <animate attributeName="stroke-opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite" />
-  </rect>"""
-    return f"""<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{title}">
-  {tile_frame(win)}{glow}{mark}
-</svg>
-"""
+# Seconds each operation takes on screen
+COMPARE_TIME = 0.05
+SWAP_TIME = 0.14
+MERGE_TIME = 0.34
 
 
-def render_empty(cell: int) -> str:
-    style = fonts_for({"mono": [str(cell)]})
-    return f"""<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{cell}">
-  <defs><style>{style} .n {{ font: 400 12px {MONO}; fill: {PALETTE['faint']}; }}</style></defs>
-  {tile_frame(False)}
-  <text x="14" y="25" class="n">{cell}</text>
-  <path d="M48 38 V58 M38 48 H58" stroke="{PALETTE['muted']}" stroke-width="3" stroke-linecap="round">
-    <animate attributeName="opacity" values="0.25;0.8;0.25" dur="2.6s" begin="{cell * 0.29:.2f}s" repeatCount="indefinite" />
-  </path>
-</svg>
-"""
+def bubble_trace(values: list[int]) -> list[tuple]:
+    arr, events = list(values), []
+    for end in range(len(arr) - 1, 0, -1):
+        swapped = False
+        for i in range(end):
+            events.append(("cmp",))
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                events.append(("swap", i, i + 1))
+                swapped = True
+        if not swapped:
+            break
+    return events
+
+
+def heap_trace(values: list[int]) -> list[tuple]:
+    arr, events = list(values), []
+
+    def sift(root: int, end: int) -> None:
+        while 2 * root + 1 < end:
+            child = 2 * root + 1
+            if child + 1 < end:
+                events.append(("cmp",))
+                if arr[child] < arr[child + 1]:
+                    child += 1
+            events.append(("cmp",))
+            if arr[root] >= arr[child]:
+                return
+            arr[root], arr[child] = arr[child], arr[root]
+            events.append(("swap", root, child))
+            root = child
+
+    for start in range(len(arr) // 2 - 1, -1, -1):
+        sift(start, len(arr))
+    for end in range(len(arr) - 1, 0, -1):
+        arr[0], arr[end] = arr[end], arr[0]
+        events.append(("swap", 0, end))
+        sift(0, end)
+    return events
+
+
+def merge_trace(values: list[int]) -> list[tuple]:
+    arr, events = list(values), []
+
+    def sort(lo: int, hi: int) -> None:
+        if hi - lo < 2:
+            return
+        mid = (lo + hi) // 2
+        sort(lo, mid)
+        sort(mid, hi)
+        left, right = arr[lo:mid], arr[mid:hi]
+        merged: list[int] = []
+        i = j = 0
+        while i < len(left) and j < len(right):
+            events.append(("cmp",))
+            if left[i] <= right[j]:
+                merged.append(left[i])
+                i += 1
+            else:
+                merged.append(right[j])
+                j += 1
+        merged += left[i:] + right[j:]
+        arr[lo:hi] = merged
+        events.append(("place", lo, merged))
+
+    sort(0, len(arr))
+    return events
+
+
+def quick_trace(values: list[int]) -> list[tuple]:
+    """Hoare partition with the middle element as pivot, like SortLab's middle-pivot QuickSort."""
+    arr, events = list(values), []
+
+    def sort(lo: int, hi: int) -> None:
+        if lo >= hi:
+            return
+        pivot = arr[(lo + hi) // 2]
+        i, j = lo, hi
+        while i <= j:
+            events.append(("cmp",))
+            while arr[i] < pivot:
+                i += 1
+                events.append(("cmp",))
+            events.append(("cmp",))
+            while arr[j] > pivot:
+                j -= 1
+                events.append(("cmp",))
+            if i <= j:
+                if i != j:
+                    arr[i], arr[j] = arr[j], arr[i]
+                    events.append(("swap", i, j))
+                i += 1
+                j -= 1
+        sort(lo, j)
+        sort(i, hi)
+
+    sort(0, len(arr) - 1)
+    return events
+
+
+RACE_ALGORITHMS = [
+    ("bubble sort", "O(n²)", bubble_trace),
+    ("heap sort", "O(n log n)", heap_trace),
+    ("merge sort", "O(n log n)", merge_trace),
+    ("quick sort", "O(n log n)", quick_trace),
+]
+
+
+def run_trace(values: list[int], events: list[tuple], start: float) -> tuple[dict, dict, float, int]:
+    """Turn a trace into per-bar position keyframes and highlight windows."""
+    arr = list(values)
+    tracks = {value: [(0.0, index), (start, index)] for index, value in enumerate(arr)}
+    flashes: dict[int, list[tuple[float, float]]] = {value: [] for value in arr}
+    moment, operations = start, 0
+
+    for event in events:
+        if event[0] == "cmp":
+            moment += COMPARE_TIME
+            operations += 1
+        elif event[0] == "swap":
+            _, i, j = event
+            for value, source, target in ((arr[i], i, j), (arr[j], j, i)):
+                tracks[value] += [(moment, source), (moment + SWAP_TIME, target)]
+                flashes[value].append((moment, moment + SWAP_TIME))
+            arr[i], arr[j] = arr[j], arr[i]
+            moment += SWAP_TIME
+            operations += 1
+        else:
+            _, lo, merged = event
+            positions = {value: index for index, value in enumerate(arr)}
+            for offset, value in enumerate(merged):
+                if positions[value] != lo + offset:
+                    tracks[value] += [(moment, positions[value]), (moment + MERGE_TIME, lo + offset)]
+                    flashes[value].append((moment, moment + MERGE_TIME))
+            arr[lo : lo + len(merged)] = merged
+            moment += MERGE_TIME
+            operations += len(merged)
+
+    if arr != sorted(values):
+        raise ValueError("trace did not sort the array")
+    return tracks, flashes, moment, operations
+
+
+def linear_keyframes(points: list[tuple[float, float]], total: float) -> tuple[str, str]:
+    cleaned: list[tuple[float, float]] = []
+    for time, value in points:
+        if cleaned and time <= cleaned[-1][0]:
+            if value == cleaned[-1][1]:
+                continue
+            time = cleaned[-1][0] + 0.001
+        cleaned.append((time, value))
+    if cleaned[-1][0] < total:
+        cleaned.append((total, cleaned[-1][1]))
+    values = ";".join(f"{value:g}" for _, value in cleaned)
+    key_times = ";".join(f"{time / total:.5f}" for time, _ in cleaned)
+    return values, key_times
+
+
+def bar_color(value: int, count: int) -> str:
+    start = (0x3F, 0xB9, 0x50)
+    end = (0x58, 0xA6, 0xFF)
+    ratio = (value - 1) / (count - 1)
+    return "#" + "".join(f"{round(a + (b - a) * ratio):02x}" for a, b in zip(start, end))
+
+
+def render_sorting_race(locale: str) -> str:
+    text = RACE_TEXT[locale]
+    width, height = 1000, 330
+    count = len(RACE_VALUES)
+    start = 0.8
+    panel_width, gap, x0, panel_y, panel_height = 220, 20, 40, 104, 200
+    pitch, bar_width, max_bar = 15, 11, 112
+    baseline = panel_y + 150
+
+    runs = []
+    for name, complexity, tracer in RACE_ALGORITHMS:
+        tracks, flashes, finish, operations = run_trace(RACE_VALUES, tracer(RACE_VALUES), start)
+        runs.append((name, complexity, tracks, flashes, finish, operations))
+    total = max(run[4] for run in runs) + 3.0
+    order = sorted(range(len(runs)), key=lambda index: runs[index][4])
+    places = {index: position + 1 for position, index in enumerate(order)}
+
+    texts = [text["title"], text["subtitle"]]
+    panels: list[str] = []
+    for index, (name, complexity, tracks, flashes, finish, operations) in enumerate(runs):
+        px = x0 + index * (panel_width + gap)
+        bars_x = px + (panel_width - (count - 1) * pitch - bar_width) / 2
+        place = places[index]
+        place_label = text["place"].format(place=place if locale == "pt" else ORDINALS_EN[place], ops=operations)
+        texts += [name, complexity, place_label]
+
+        bars = []
+        for value in RACE_VALUES:
+            points = [(time, round(bars_x + slot * pitch, 1)) for time, slot in tracks[value]]
+            x_values, x_times = linear_keyframes(points, total)
+            base = bar_color(value, count)
+            color_points = [(0.0, base)]
+            for begin, end in flashes[value]:
+                color_points += [(begin, PALETTE["amber"]), (end, base)]
+            color_values = ";".join(color for _, color in color_points)
+            color_times = ";".join(f"{time / total:.5f}" for time, _ in color_points)
+            bar_height = max_bar * value / count
+            initial_x = bars_x + RACE_VALUES.index(value) * pitch
+            bars.append(
+                f"""
+      <rect x="{initial_x:.1f}" y="{baseline - bar_height:.1f}" width="{bar_width}" height="{bar_height:.1f}" rx="2" fill="{base}">
+        <animate attributeName="x" dur="{total:.2f}s" repeatCount="indefinite" values="{x_values}" keyTimes="{x_times}" />
+        <animate attributeName="fill" dur="{total:.2f}s" repeatCount="indefinite" calcMode="discrete" values="{color_values}" keyTimes="{color_times}" />
+      </rect>"""
+            )
+
+        finished_values, finished_times = discrete_keytimes([(0.0, 0), (finish, 1), (total, 1)], total)
+        progress_width = panel_width - 32
+        panels.append(
+            f"""
+  <g>
+    <rect x="{px}" y="{panel_y}" width="{panel_width}" height="{panel_height}" rx="12" fill="{PALETTE['panel']}" stroke="{PALETTE['line']}" />
+    <rect x="{px}" y="{panel_y}" width="{panel_width}" height="{panel_height}" rx="12" stroke="{PALETTE['green']}" stroke-width="1.5">
+      <animate attributeName="opacity" dur="{total:.2f}s" repeatCount="indefinite" calcMode="discrete" values="{finished_values}" keyTimes="{finished_times}" />
+    </rect>
+    <text x="{px + 16}" y="{panel_y + 28}" class="algo">{esc(name)}</text>
+    <text x="{px + panel_width - 16}" y="{panel_y + 28}" class="complexity" text-anchor="end">{esc(complexity)}</text>{''.join(bars)}
+    <rect x="{px + 16}" y="{baseline + 14}" width="{progress_width}" height="4" rx="2" fill="{PALETTE['grid']}" />
+    <rect x="{px + 16}" y="{baseline + 14}" width="{progress_width}" height="4" rx="2" fill="url(#r-progress)">
+      <animate attributeName="width" dur="{total:.2f}s" repeatCount="indefinite" values="0;0;{progress_width};{progress_width}" keyTimes="0;{start / total:.4f};{finish / total:.4f};1" />
+    </rect>
+    <text x="{px + 16}" y="{baseline + 38}" class="place place-{place}">{esc(place_label)}
+      <animate attributeName="opacity" dur="{total:.2f}s" repeatCount="indefinite" calcMode="discrete" values="{finished_values}" keyTimes="{finished_times}" />
+    </text>
+  </g>"""
+        )
+
+    fade_times = f"0;{0.4 / total:.4f};{(total - 0.45) / total:.4f};1"
+    defs = card_defs("r") + f"""
+    <linearGradient id="r-progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{PALETTE['green']}" />
+      <stop offset="1" stop-color="{PALETTE['blue']}" />
+    </linearGradient>"""
+    style = fonts_for({"mono": texts[1:], "display": [text["title"]]}) + f"""
+      .title {{ font: 700 24px {DISPLAY}; fill: {PALETTE['text']}; }}
+      .subtitle {{ font: 400 12px {MONO}; fill: {PALETTE['muted']}; }}
+      .algo {{ font: 700 13px {MONO}; fill: {PALETTE['text']}; }}
+      .complexity {{ font: 400 11px {MONO}; fill: {PALETTE['faint']}; }}
+      .place {{ font: 700 11px {MONO}; fill: {PALETTE['muted']}; }}
+      .place-1 {{ fill: {PALETTE['amber']}; }}"""
+    body = card_background("r", width, height) + f"""
+  <text x="40" y="56" class="title">{esc(text['title'])}</text>
+  <text x="40" y="80" class="subtitle">{esc(text['subtitle'])}</text>
+  <g>
+    <animate attributeName="opacity" dur="{total:.2f}s" repeatCount="indefinite" values="0;1;1;0" keyTimes="{fade_times}" />{''.join(panels)}
+  </g>"""
+    title = f"{text['title']}: " + ", ".join(name for name, *_ in RACE_ALGORITHMS)
+    return svg_document(width, height, title, defs, style, body)
 
 
 def main() -> None:
     ASSETS.mkdir(exist_ok=True)
-    (ASSETS / "ttt").mkdir(exist_ok=True)
     for locale in CONTENT:
         (ASSETS / f"header{suffix(locale)}.svg").write_text(render_header(locale), encoding="utf-8", newline="\n")
         (ASSETS / f"terminal{suffix(locale)}.svg").write_text(render_terminal(locale), encoding="utf-8", newline="\n")
         (ASSETS / f"stack{suffix(locale)}.svg").write_text(render_stack(locale), encoding="utf-8", newline="\n")
+        (ASSETS / f"sorting-race{suffix(locale)}.svg").write_text(render_sorting_race(locale), encoding="utf-8", newline="\n")
     (ASSETS / "footer.svg").write_text(render_footer(), encoding="utf-8", newline="\n")
-    for kind in ("x", "o"):
-        (ASSETS / "ttt" / f"{kind}.svg").write_text(render_piece(kind), encoding="utf-8", newline="\n")
-        (ASSETS / "ttt" / f"{kind}-win.svg").write_text(render_piece(kind, win=True), encoding="utf-8", newline="\n")
-    for cell in range(1, 10):
-        (ASSETS / "ttt" / f"empty-{cell}.svg").write_text(render_empty(cell), encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

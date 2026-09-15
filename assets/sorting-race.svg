@@ -1,0 +1,315 @@
+<svg width="1000" height="330" viewBox="0 0 1000 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corrida de ordenação: bubble sort, heap sort, merge sort, quick sort">
+  <title>Corrida de ordenação: bubble sort, heap sort, merge sort, quick sort</title>
+  <defs>
+    <pattern id="r-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#1c232d" />
+    </pattern>
+    <pattern id="r-scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.018" />
+    </pattern>
+    <linearGradient id="r-progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb950" />
+      <stop offset="1" stop-color="#58a6ff" />
+    </linearGradient>
+    <style>@font-face{font-family:'Martian Mono';font-weight:400 700;src:url(data:font/woff2;base64,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) format('woff2');}@font-face{font-family:'Unbounded';font-weight:700 700;src:url(data:font/woff2;base64,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) format('woff2');}
+      .title { font: 700 24px 'Unbounded', 'Segoe UI', Ubuntu, sans-serif; fill: #e6edf3; }
+      .subtitle { font: 400 12px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #8b949e; }
+      .algo { font: 700 13px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #e6edf3; }
+      .complexity { font: 400 11px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #6e7681; }
+      .place { font: 700 11px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #8b949e; }
+      .place-1 { fill: #f0b429; }</style>
+  </defs>
+  <rect width="1000" height="330" rx="18" fill="#0b0f14" />
+  <rect width="1000" height="330" rx="18" fill="url(#r-dots)" />
+  <rect width="1000" height="330" rx="18" fill="url(#r-scan)" />
+  <rect x="0.5" y="0.5" width="999" height="329" rx="18" stroke="#21262d" />
+  <text x="40" y="56" class="title">Corrida de ordenação</text>
+  <text x="40" y="80" class="subtitle">mesmo vetor embaralhado · cada comparação e cada troca levam o mesmo tempo</text>
+  <g>
+    <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.0232;0.9739;1" />
+  <g>
+    <rect x="40" y="104" width="220" height="200" rx="12" fill="#0d1117" stroke="#21262d" />
+    <rect x="40" y="104" width="220" height="200" rx="12" stroke="#3fb950" stroke-width="1.5">
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.8262;1.0000" />
+    </rect>
+    <text x="56" y="132" class="algo">bubble sort</text>
+    <text x="244" y="132" class="complexity" text-anchor="end">O(n²)</text>
+      <rect x="47.0" y="158.0" width="11" height="96.0" rx="2" fill="#54a9e4">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="47;47;47;62;62;77;77;92;92;107;107;122;122;137;137;152;152;167;167;182;182;197;197;212;212" keyTimes="0.00000;0.04635;0.04925;0.05736;0.06025;0.06837;0.07126;0.07937;0.08227;0.09038;0.31981;0.32793;0.33082;0.33893;0.34183;0.34994;0.35284;0.36095;0.36385;0.37196;0.37486;0.38297;0.38586;0.39397;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4" keyTimes="0.00000;0.04925;0.05736;0.06025;0.06837;0.07126;0.07937;0.08227;0.09038;0.31981;0.32793;0.33082;0.33893;0.34183;0.34994;0.35284;0.36095;0.36385;0.37196;0.37486;0.38297;0.38586;0.39397" />
+      </rect>
+      <rect x="62.0" y="174.0" width="11" height="80.0" rx="2" fill="#50acc9">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="62;62;62;47;47;62;62;77;77;92;92;107;107;122;122;137;137;152;152;167;167;182;182" keyTimes="0.00000;0.04635;0.04925;0.05736;0.29200;0.30012;0.30301;0.31112;0.48841;0.49652;0.49942;0.50753;0.51043;0.51854;0.52144;0.52955;0.53244;0.54056;0.54345;0.55156;0.55446;0.56257;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9" keyTimes="0.00000;0.04925;0.05736;0.29200;0.30012;0.30301;0.31112;0.48841;0.49652;0.49942;0.50753;0.51043;0.51854;0.52144;0.52955;0.53244;0.54056;0.54345;0.55156;0.55446;0.56257" />
+      </rect>
+      <rect x="77.0" y="166.0" width="11" height="88.0" rx="2" fill="#52aad7">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="77;77;77;62;62;77;77;92;92;107;107;122;122;137;137;152;152;167;167;182;182;197;197" keyTimes="0.00000;0.04635;0.06025;0.06837;0.18714;0.19525;0.19815;0.20626;0.40556;0.41367;0.41657;0.42468;0.42758;0.43569;0.43859;0.44670;0.44959;0.45771;0.46060;0.46871;0.47161;0.47972;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7" keyTimes="0.00000;0.06025;0.06837;0.18714;0.19525;0.19815;0.20626;0.40556;0.41367;0.41657;0.42468;0.42758;0.43569;0.43859;0.44670;0.44959;0.45771;0.46060;0.46871;0.47161;0.47972" />
+      </rect>
+      <rect x="92.0" y="214.0" width="11" height="40.0" rx="2" fill="#47b386">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="92;92;92;77;77;62;62;47;47;62;62;77;77;92;92;107;107" keyTimes="0.00000;0.04635;0.07126;0.07937;0.18714;0.19525;0.29200;0.30012;0.63731;0.64542;0.70104;0.70915;0.75377;0.76188;0.76477;0.77289;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386" keyTimes="0.00000;0.07126;0.07937;0.18714;0.19525;0.29200;0.30012;0.63731;0.64542;0.70104;0.70915;0.75377;0.76188;0.76477;0.77289" />
+      </rect>
+      <rect x="107.0" y="206.0" width="11" height="48.0" rx="2" fill="#49b293">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="107;107;107;92;92;77;77;62;62;77;77;92;92;107;107;122;122" keyTimes="0.00000;0.04635;0.08227;0.09038;0.19815;0.20626;0.30301;0.31112;0.56837;0.57648;0.65122;0.65933;0.71495;0.72306;0.72596;0.73407;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293" keyTimes="0.00000;0.08227;0.09038;0.19815;0.20626;0.30301;0.31112;0.56837;0.57648;0.65122;0.65933;0.71495;0.72306;0.72596;0.73407" />
+      </rect>
+      <rect x="122.0" y="142.0" width="11" height="112.0" rx="2" fill="#58a6ff">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="122;122;122;137;137;152;152;167;167;182;182;197;197;212;212;227;227;242;242" keyTimes="0.00000;0.04635;0.09618;0.10429;0.10718;0.11530;0.11819;0.12630;0.12920;0.13731;0.14021;0.14832;0.15122;0.15933;0.16222;0.17034;0.17323;0.18134;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff" keyTimes="0.00000;0.09618;0.10429;0.10718;0.11530;0.11819;0.12630;0.12920;0.13731;0.14021;0.14832;0.15122;0.15933;0.16222;0.17034;0.17323;0.18134" />
+      </rect>
+      <rect x="137.0" y="150.0" width="11" height="104.0" rx="2" fill="#56a7f2">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="137;137;137;122;122;137;137;152;152;167;167;182;182;197;197;212;212;227;227" keyTimes="0.00000;0.04635;0.09618;0.10429;0.21495;0.22306;0.22596;0.23407;0.23696;0.24508;0.24797;0.25608;0.25898;0.26709;0.26999;0.27810;0.28100;0.28911;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2" keyTimes="0.00000;0.09618;0.10429;0.21495;0.22306;0.22596;0.23407;0.23696;0.24508;0.24797;0.25608;0.25898;0.26709;0.26999;0.27810;0.28100;0.28911" />
+      </rect>
+      <rect x="152.0" y="222.0" width="11" height="32.0" rx="2" fill="#45b578">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="152;152;152;137;137;122;122;107;107;92;92;77;77;62;62;47;47;62;62;77;77;92;92" keyTimes="0.00000;0.04635;0.10718;0.11530;0.21495;0.22306;0.31981;0.32793;0.40556;0.41367;0.48841;0.49652;0.56837;0.57648;0.63731;0.64542;0.73986;0.74797;0.78158;0.78969;0.79258;0.80070;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578" keyTimes="0.00000;0.10718;0.11530;0.21495;0.22306;0.31981;0.32793;0.40556;0.41367;0.48841;0.49652;0.56837;0.57648;0.63731;0.64542;0.73986;0.74797;0.78158;0.78969;0.79258;0.80070" />
+      </rect>
+      <rect x="167.0" y="182.0" width="11" height="72.0" rx="2" fill="#4eadbc">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="167;167;167;152;152;137;137;122;122;107;107;92;92;107;107;122;122;137;137;152;152;167;167" keyTimes="0.00000;0.04635;0.11819;0.12630;0.22596;0.23407;0.33082;0.33893;0.41657;0.42468;0.49942;0.50753;0.58227;0.59038;0.59328;0.60139;0.60429;0.61240;0.61530;0.62341;0.62630;0.63441;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc" keyTimes="0.00000;0.11819;0.12630;0.22596;0.23407;0.33082;0.33893;0.41657;0.42468;0.49942;0.50753;0.58227;0.59038;0.59328;0.60139;0.60429;0.61240;0.61530;0.62341;0.62630;0.63441" />
+      </rect>
+      <rect x="182.0" y="238.0" width="11" height="16.0" rx="2" fill="#41b85d">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="182;182;182;167;167;152;152;137;137;122;122;107;107;92;92;77;77;62;62;47;47;62;62" keyTimes="0.00000;0.04635;0.12920;0.13731;0.23696;0.24508;0.34183;0.34994;0.42758;0.43569;0.51043;0.51854;0.58227;0.59038;0.65122;0.65933;0.70104;0.70915;0.73986;0.74797;0.80649;0.81460;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d" keyTimes="0.00000;0.12920;0.13731;0.23696;0.24508;0.34183;0.34994;0.42758;0.43569;0.51043;0.51854;0.58227;0.59038;0.65122;0.65933;0.70104;0.70915;0.73986;0.74797;0.80649;0.81460" />
+      </rect>
+      <rect x="197.0" y="190.0" width="11" height="64.0" rx="2" fill="#4cafae">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="197;197;197;182;182;167;167;152;152;137;137;122;122;107;107;122;122;137;137;152;152" keyTimes="0.00000;0.04635;0.14021;0.14832;0.24797;0.25608;0.35284;0.36095;0.43859;0.44670;0.52144;0.52955;0.59328;0.60139;0.66512;0.67323;0.67613;0.68424;0.68714;0.69525;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae" keyTimes="0.00000;0.14021;0.14832;0.24797;0.25608;0.35284;0.36095;0.43859;0.44670;0.52144;0.52955;0.59328;0.60139;0.66512;0.67323;0.67613;0.68424;0.68714;0.69525" />
+      </rect>
+      <rect x="212.0" y="246.0" width="11" height="8.0" rx="2" fill="#3fb950">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="212;212;212;197;197;182;182;167;167;152;152;137;137;122;122;107;107;92;92;77;77;62;62;47;47" keyTimes="0.00000;0.04635;0.15122;0.15933;0.25898;0.26709;0.36385;0.37196;0.44959;0.45771;0.53244;0.54056;0.60429;0.61240;0.66512;0.67323;0.71495;0.72306;0.75377;0.76188;0.78158;0.78969;0.80649;0.81460;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950" keyTimes="0.00000;0.15122;0.15933;0.25898;0.26709;0.36385;0.37196;0.44959;0.45771;0.53244;0.54056;0.60429;0.61240;0.66512;0.67323;0.71495;0.72306;0.75377;0.76188;0.78158;0.78969;0.80649;0.81460" />
+      </rect>
+      <rect x="227.0" y="230.0" width="11" height="24.0" rx="2" fill="#43b66b">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="227;227;227;212;212;197;197;182;182;167;167;152;152;137;137;122;122;107;107;92;92;77;77" keyTimes="0.00000;0.04635;0.16222;0.17034;0.26999;0.27810;0.37486;0.38297;0.46060;0.46871;0.54345;0.55156;0.61530;0.62341;0.67613;0.68424;0.72596;0.73407;0.76477;0.77289;0.79258;0.80070;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b" keyTimes="0.00000;0.16222;0.17034;0.26999;0.27810;0.37486;0.38297;0.46060;0.46871;0.54345;0.55156;0.61530;0.62341;0.67613;0.68424;0.72596;0.73407;0.76477;0.77289;0.79258;0.80070" />
+      </rect>
+      <rect x="242.0" y="198.0" width="11" height="56.0" rx="2" fill="#4bb0a1">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="242;242;242;227;227;212;212;197;197;182;182;167;167;152;152;137;137" keyTimes="0.00000;0.04635;0.17323;0.18134;0.28100;0.28911;0.38586;0.39397;0.47161;0.47972;0.55446;0.56257;0.62630;0.63441;0.68714;0.69525;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1" keyTimes="0.00000;0.17323;0.18134;0.28100;0.28911;0.38586;0.39397;0.47161;0.47972;0.55446;0.56257;0.62630;0.63441;0.68714;0.69525" />
+      </rect>
+    <rect x="56" y="268" width="188" height="4" rx="2" fill="#1c232d" />
+    <rect x="56" y="268" width="188" height="4" rx="2" fill="url(#r-progress)">
+      <animate attributeName="width" dur="17.26s" repeatCount="indefinite" values="0;0;188;188" keyTimes="0;0.0463;0.8262;1" />
+    </rect>
+    <text x="56" y="292" class="place place-4">4º lugar · 154 operações
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.8262;1.0000" />
+    </text>
+  </g>
+  <g>
+    <rect x="280" y="104" width="220" height="200" rx="12" fill="#0d1117" stroke="#21262d" />
+    <rect x="280" y="104" width="220" height="200" rx="12" stroke="#3fb950" stroke-width="1.5">
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.5209;1.0000" />
+    </rect>
+    <text x="296" y="132" class="algo">heap sort</text>
+    <text x="484" y="132" class="complexity" text-anchor="end">O(n log n)</text>
+      <rect x="287.0" y="158.0" width="11" height="96.0" rx="2" fill="#54a9e4">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="287;287;287;317;317;377;377;317;317;287;287;452;452" keyTimes="0.00000;0.04635;0.11414;0.12225;0.12804;0.13615;0.16686;0.17497;0.18888;0.19699;0.21379;0.22190;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4" keyTimes="0.00000;0.11414;0.12225;0.12804;0.13615;0.16686;0.17497;0.18888;0.19699;0.21379;0.22190" />
+      </rect>
+      <rect x="302.0" y="174.0" width="11" height="80.0" rx="2" fill="#50acc9">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="302;302;302;287;287;422;422" keyTimes="0.00000;0.04635;0.26362;0.27173;0.29143;0.29954;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#50acc9;#f0b429;#50acc9;#f0b429;#50acc9" keyTimes="0.00000;0.26362;0.27173;0.29143;0.29954" />
+      </rect>
+      <rect x="317.0" y="166.0" width="11" height="88.0" rx="2" fill="#52aad7">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="317;317;317;362;362;317;317;287;287;437;437" keyTimes="0.00000;0.04635;0.08864;0.09676;0.20278;0.21089;0.22769;0.23581;0.24971;0.25782;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7" keyTimes="0.00000;0.08864;0.09676;0.20278;0.21089;0.22769;0.23581;0.24971;0.25782" />
+      </rect>
+      <rect x="332.0" y="214.0" width="11" height="40.0" rx="2" fill="#47b386">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="332;332;332;407;407;287;287;302;302;332;332;302;302;287;287;347;347" keyTimes="0.00000;0.04635;0.07474;0.08285;0.32735;0.33546;0.34125;0.34936;0.35516;0.36327;0.42178;0.42990;0.44380;0.45191;0.45771;0.46582;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386;#f0b429;#47b386" keyTimes="0.00000;0.07474;0.08285;0.32735;0.33546;0.34125;0.34936;0.35516;0.36327;0.42178;0.42990;0.44380;0.45191;0.45771;0.46582" />
+      </rect>
+      <rect x="347.0" y="206.0" width="11" height="48.0" rx="2" fill="#49b293">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="347;347;347;437;437;287;287;302;302;332;332;302;302;287;287;362;362" keyTimes="0.00000;0.04635;0.06083;0.06895;0.24971;0.25782;0.26362;0.27173;0.27752;0.28563;0.35516;0.36327;0.40788;0.41599;0.42990;0.43801;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293;#f0b429;#49b293" keyTimes="0.00000;0.06083;0.06895;0.24971;0.25782;0.26362;0.27173;0.27752;0.28563;0.35516;0.36327;0.40788;0.41599;0.42990;0.43801" />
+      </rect>
+      <rect x="362.0" y="142.0" width="11" height="112.0" rx="2" fill="#58a6ff">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="362;362;362;317;317;287;287;482;482" keyTimes="0.00000;0.04635;0.08864;0.09676;0.11414;0.12225;0.13905;0.14716;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff" keyTimes="0.00000;0.08864;0.09676;0.11414;0.12225;0.13905;0.14716" />
+      </rect>
+      <rect x="377.0" y="150.0" width="11" height="104.0" rx="2" fill="#56a7f2">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="377;377;377;317;317;287;287;467;467" keyTimes="0.00000;0.04635;0.12804;0.13615;0.15295;0.16107;0.17497;0.18308;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2" keyTimes="0.00000;0.12804;0.13615;0.15295;0.16107;0.17497;0.18308" />
+      </rect>
+      <rect x="392.0" y="222.0" width="11" height="32.0" rx="2" fill="#45b578">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="392;392;392;287;287;317;317;287;332;332" keyTimes="0.00000;0.04635;0.36616;0.37428;0.38007;0.38818;0.47161;0.47972;0.48783;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578" keyTimes="0.00000;0.36616;0.37428;0.38007;0.38818;0.47161;0.47972;0.47972;0.48783" />
+      </rect>
+      <rect x="407.0" y="182.0" width="11" height="72.0" rx="2" fill="#4eadbc">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="407;407;407;332;332;302;302;287;287;407;407" keyTimes="0.00000;0.04635;0.07474;0.08285;0.27752;0.28563;0.30533;0.31344;0.32735;0.33546;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc" keyTimes="0.00000;0.07474;0.08285;0.27752;0.28563;0.30533;0.31344;0.32735;0.33546" />
+      </rect>
+      <rect x="422.0" y="238.0" width="11" height="16.0" rx="2" fill="#41b85d">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="422;422;422;287;287;302;302;347;347;287;287;317;317;287;287;302;302" keyTimes="0.00000;0.04635;0.29143;0.29954;0.30533;0.31344;0.31924;0.32735;0.45771;0.46582;0.47161;0.47972;0.50174;0.50985;0.51275;0.52086;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d" keyTimes="0.00000;0.29143;0.29954;0.30533;0.31344;0.31924;0.32735;0.45771;0.46582;0.47161;0.47972;0.50174;0.50985;0.51275;0.52086" />
+      </rect>
+      <rect x="437.0" y="190.0" width="11" height="64.0" rx="2" fill="#4cafae">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="437;437;437;347;347;302;302;287;287;392;392" keyTimes="0.00000;0.04635;0.06083;0.06895;0.31924;0.32735;0.34125;0.34936;0.36616;0.37428;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae" keyTimes="0.00000;0.06083;0.06895;0.31924;0.32735;0.34125;0.34936;0.36616;0.37428" />
+      </rect>
+      <rect x="452.0" y="246.0" width="11" height="8.0" rx="2" fill="#3fb950">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="452;452;452;287;287;317;317;377;377;287;287;302;302;332;332;287;287;302;302;287;287" keyTimes="0.00000;0.04635;0.21379;0.22190;0.22769;0.23581;0.24160;0.24971;0.39397;0.40209;0.40788;0.41599;0.42178;0.42990;0.47972;0.48783;0.49363;0.50174;0.51275;0.52086;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950" keyTimes="0.00000;0.21379;0.22190;0.22769;0.23581;0.24160;0.24971;0.39397;0.40209;0.40788;0.41599;0.42178;0.42990;0.47972;0.48783;0.49363;0.50174;0.51275;0.52086" />
+      </rect>
+      <rect x="467.0" y="230.0" width="11" height="24.0" rx="2" fill="#43b66b">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="467;467;467;287;287;317;317;362;362;287;287;302;302;287;317;317" keyTimes="0.00000;0.04635;0.17497;0.18308;0.18888;0.19699;0.20278;0.21089;0.42990;0.43801;0.44380;0.45191;0.49363;0.50174;0.50985;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b" keyTimes="0.00000;0.17497;0.18308;0.18888;0.19699;0.20278;0.21089;0.42990;0.43801;0.44380;0.45191;0.49363;0.50174;0.50174;0.50985" />
+      </rect>
+      <rect x="482.0" y="198.0" width="11" height="56.0" rx="2" fill="#4bb0a1">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="482;482;482;287;287;317;317;377;377;317;317;287;287;377;377" keyTimes="0.00000;0.04635;0.13905;0.14716;0.15295;0.16107;0.16686;0.17497;0.24160;0.24971;0.38007;0.38818;0.39397;0.40209;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1" keyTimes="0.00000;0.13905;0.14716;0.15295;0.16107;0.16686;0.17497;0.24160;0.24971;0.38007;0.38818;0.39397;0.40209" />
+      </rect>
+    <rect x="296" y="268" width="188" height="4" rx="2" fill="#1c232d" />
+    <rect x="296" y="268" width="188" height="4" rx="2" fill="url(#r-progress)">
+      <animate attributeName="width" dur="17.26s" repeatCount="indefinite" values="0;0;188;188" keyTimes="0;0.0463;0.5209;1" />
+    </rect>
+    <text x="296" y="292" class="place place-3">3º lugar · 99 operações
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.5209;1.0000" />
+    </text>
+  </g>
+  <g>
+    <rect x="520" y="104" width="220" height="200" rx="12" fill="#0d1117" stroke="#21262d" />
+    <rect x="520" y="104" width="220" height="200" rx="12" stroke="#3fb950" stroke-width="1.5">
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.4038;1.0000" />
+    </rect>
+    <text x="536" y="132" class="algo">merge sort</text>
+    <text x="724" y="132" class="complexity" text-anchor="end">O(n log n)</text>
+      <rect x="527.0" y="158.0" width="11" height="96.0" rx="2" fill="#54a9e4">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="527;527;527;557;557;587;587;692;692" keyTimes="0.00000;0.04635;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4;#f0b429;#54a9e4" keyTimes="0.00000;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382" />
+      </rect>
+      <rect x="542.0" y="174.0" width="11" height="80.0" rx="2" fill="#50acc9">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="542;542;542;527;527;557;557;662;662" keyTimes="0.00000;0.04635;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#50acc9;#f0b429;#50acc9;#f0b429;#50acc9;#f0b429;#50acc9" keyTimes="0.00000;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382" />
+      </rect>
+      <rect x="557.0" y="166.0" width="11" height="88.0" rx="2" fill="#52aad7">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="557;557;557;542;542;572;572;677;677" keyTimes="0.00000;0.04635;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#52aad7;#f0b429;#52aad7;#f0b429;#52aad7;#f0b429;#52aad7" keyTimes="0.00000;0.07474;0.09444;0.17961;0.19930;0.38413;0.40382" />
+      </rect>
+      <rect x="572.0" y="214.0" width="11" height="40.0" rx="2" fill="#47b386">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="572;572;572;527;527;587;587" keyTimes="0.00000;0.04635;0.17961;0.19930;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#47b386;#f0b429;#47b386;#f0b429;#47b386" keyTimes="0.00000;0.17961;0.19930;0.38413;0.40382" />
+      </rect>
+      <rect x="587.0" y="206.0" width="11" height="48.0" rx="2" fill="#49b293">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="587;587;587;542;542;602;602" keyTimes="0.00000;0.04635;0.17961;0.19930;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#49b293;#f0b429;#49b293;#f0b429;#49b293" keyTimes="0.00000;0.17961;0.19930;0.38413;0.40382" />
+      </rect>
+      <rect x="602.0" y="142.0" width="11" height="112.0" rx="2" fill="#58a6ff">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="602;602;602;617;617;722;722" keyTimes="0.00000;0.04635;0.11993;0.13963;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#58a6ff;#f0b429;#58a6ff;#f0b429;#58a6ff" keyTimes="0.00000;0.11993;0.13963;0.38413;0.40382" />
+      </rect>
+      <rect x="617.0" y="150.0" width="11" height="104.0" rx="2" fill="#56a7f2">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="617;617;617;602;602;707;707" keyTimes="0.00000;0.04635;0.11993;0.13963;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#56a7f2;#f0b429;#56a7f2;#f0b429;#56a7f2" keyTimes="0.00000;0.11993;0.13963;0.38413;0.40382" />
+      </rect>
+      <rect x="632.0" y="222.0" width="11" height="32.0" rx="2" fill="#45b578">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="632;632;632;647;647;677;677;572;572" keyTimes="0.00000;0.04635;0.22769;0.24739;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578" keyTimes="0.00000;0.22769;0.24739;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="647.0" y="182.0" width="11" height="72.0" rx="2" fill="#4eadbc">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="647;647;647;662;662;722;722;647;647" keyTimes="0.00000;0.04635;0.20220;0.22190;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc;#f0b429;#4eadbc" keyTimes="0.00000;0.20220;0.22190;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="662.0" y="238.0" width="11" height="16.0" rx="2" fill="#41b85d">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="662;662;662;647;647;632;632;647;647;542;542" keyTimes="0.00000;0.04635;0.20220;0.22190;0.22769;0.24739;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d;#f0b429;#41b85d" keyTimes="0.00000;0.20220;0.22190;0.22769;0.24739;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="677.0" y="190.0" width="11" height="64.0" rx="2" fill="#4cafae">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="677;677;677;692;692;722;722;707;707;632;632" keyTimes="0.00000;0.04635;0.25029;0.26999;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae;#f0b429;#4cafae" keyTimes="0.00000;0.25029;0.26999;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="692.0" y="246.0" width="11" height="8.0" rx="2" fill="#3fb950">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="692;692;692;677;677;632;632;527;527" keyTimes="0.00000;0.04635;0.25029;0.26999;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#3fb950;#f0b429;#3fb950;#f0b429;#3fb950;#f0b429;#3fb950" keyTimes="0.00000;0.25029;0.26999;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="707.0" y="230.0" width="11" height="24.0" rx="2" fill="#43b66b">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="707;707;707;692;692;662;662;557;557" keyTimes="0.00000;0.04635;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b" keyTimes="0.00000;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+      <rect x="722.0" y="198.0" width="11" height="56.0" rx="2" fill="#4bb0a1">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="722;722;722;707;707;692;692;617;617" keyTimes="0.00000;0.04635;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1" keyTimes="0.00000;0.30127;0.32097;0.33835;0.35805;0.38413;0.40382" />
+      </rect>
+    <rect x="536" y="268" width="188" height="4" rx="2" fill="#1c232d" />
+    <rect x="536" y="268" width="188" height="4" rx="2" fill="url(#r-progress)">
+      <animate attributeName="width" dur="17.26s" repeatCount="indefinite" values="0;0;188;188" keyTimes="0;0.0463;0.4038;1" />
+    </rect>
+    <text x="536" y="292" class="place place-2">2º lugar · 89 operações
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.4038;1.0000" />
+    </text>
+  </g>
+  <g>
+    <rect x="760" y="104" width="220" height="200" rx="12" fill="#0d1117" stroke="#21262d" />
+    <rect x="760" y="104" width="220" height="200" rx="12" stroke="#3fb950" stroke-width="1.5">
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.3071;1.0000" />
+    </rect>
+    <text x="776" y="132" class="algo">quick sort</text>
+    <text x="964" y="132" class="complexity" text-anchor="end">O(n log n)</text>
+      <rect x="767.0" y="158.0" width="11" height="96.0" rx="2" fill="#54a9e4">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="767;767;767;932;932" keyTimes="0.00000;0.04635;0.11472;0.12283;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#54a9e4;#f0b429;#54a9e4" keyTimes="0.00000;0.11472;0.12283" />
+      </rect>
+      <rect x="782.0" y="174.0" width="11" height="80.0" rx="2" fill="#50acc9">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="782;782;782;902;902" keyTimes="0.00000;0.04635;0.13152;0.13963;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#50acc9;#f0b429;#50acc9" keyTimes="0.00000;0.13152;0.13963" />
+      </rect>
+      <rect x="797.0" y="166.0" width="11" height="88.0" rx="2" fill="#52aad7">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="797;797;797;872;872;917;917" keyTimes="0.00000;0.04635;0.14832;0.15643;0.26130;0.26941;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#52aad7;#f0b429;#52aad7;#f0b429;#52aad7" keyTimes="0.00000;0.14832;0.15643;0.26130;0.26941" />
+      </rect>
+      <rect x="812.0" y="214.0" width="11" height="40.0" rx="2" fill="#47b386">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="812;812;812;827;827" keyTimes="0.00000;0.04635;0.24160;0.24971;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#47b386;#f0b429;#47b386" keyTimes="0.00000;0.24160;0.24971" />
+      </rect>
+      <rect x="827.0" y="206.0" width="11" height="48.0" rx="2" fill="#49b293">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="827;827;827;842;842" keyTimes="0.00000;0.04635;0.22769;0.23581;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#49b293;#f0b429;#49b293" keyTimes="0.00000;0.22769;0.23581" />
+      </rect>
+      <rect x="842.0" y="142.0" width="11" height="112.0" rx="2" fill="#58a6ff">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="842;842;842;962;962" keyTimes="0.00000;0.04635;0.06663;0.07474;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#58a6ff;#f0b429;#58a6ff" keyTimes="0.00000;0.06663;0.07474" />
+      </rect>
+      <rect x="857.0" y="150.0" width="11" height="104.0" rx="2" fill="#56a7f2">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="857;857;857;947;947" keyTimes="0.00000;0.04635;0.08053;0.08864;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#56a7f2;#f0b429;#56a7f2" keyTimes="0.00000;0.08053;0.08864" />
+      </rect>
+      <rect x="872.0" y="222.0" width="11" height="32.0" rx="2" fill="#45b578">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="872;872;872;797;797;842;842;827;827;812;812" keyTimes="0.00000;0.04635;0.14832;0.15643;0.18772;0.19583;0.22769;0.23581;0.24160;0.24971;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578;#f0b429;#45b578" keyTimes="0.00000;0.14832;0.15643;0.18772;0.19583;0.22769;0.23581;0.24160;0.24971" />
+      </rect>
+      <rect x="887.0" y="182.0" width="11" height="72.0" rx="2" fill="#4eadbc">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="887;887;887" keyTimes="0.00000;0.04635;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4eadbc" keyTimes="0.00000" />
+      </rect>
+      <rect x="902.0" y="238.0" width="11" height="16.0" rx="2" fill="#41b85d">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="902;902;902;782;782" keyTimes="0.00000;0.04635;0.13152;0.13963;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#41b85d;#f0b429;#41b85d" keyTimes="0.00000;0.13152;0.13963" />
+      </rect>
+      <rect x="917.0" y="190.0" width="11" height="64.0" rx="2" fill="#4cafae">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="917;917;917;872;872" keyTimes="0.00000;0.04635;0.26130;0.26941;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4cafae;#f0b429;#4cafae" keyTimes="0.00000;0.26130;0.26941" />
+      </rect>
+      <rect x="932.0" y="246.0" width="11" height="8.0" rx="2" fill="#3fb950">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="932;932;932;767;767" keyTimes="0.00000;0.04635;0.11472;0.12283;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#3fb950;#f0b429;#3fb950" keyTimes="0.00000;0.11472;0.12283" />
+      </rect>
+      <rect x="947.0" y="230.0" width="11" height="24.0" rx="2" fill="#43b66b">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="947;947;947;857;857;842;842;797;797" keyTimes="0.00000;0.04635;0.08053;0.08864;0.16802;0.17613;0.18772;0.19583;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#43b66b;#f0b429;#43b66b;#f0b429;#43b66b;#f0b429;#43b66b" keyTimes="0.00000;0.08053;0.08864;0.16802;0.17613;0.18772;0.19583" />
+      </rect>
+      <rect x="962.0" y="198.0" width="11" height="56.0" rx="2" fill="#4bb0a1">
+        <animate attributeName="x" dur="17.26s" repeatCount="indefinite" values="962;962;962;842;842;857;857" keyTimes="0.00000;0.04635;0.06663;0.07474;0.16802;0.17613;1.00000" />
+        <animate attributeName="fill" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="#4bb0a1;#f0b429;#4bb0a1;#f0b429;#4bb0a1" keyTimes="0.00000;0.06663;0.07474;0.16802;0.17613" />
+      </rect>
+    <rect x="776" y="268" width="188" height="4" rx="2" fill="#1c232d" />
+    <rect x="776" y="268" width="188" height="4" rx="2" fill="url(#r-progress)">
+      <animate attributeName="width" dur="17.26s" repeatCount="indefinite" values="0;0;188;188" keyTimes="0;0.0463;0.3071;1" />
+    </rect>
+    <text x="776" y="292" class="place place-1">1º lugar · 72 operações
+      <animate attributeName="opacity" dur="17.26s" repeatCount="indefinite" calcMode="discrete" values="0;1;1" keyTimes="0.0000;0.3071;1.0000" />
+    </text>
+  </g>
+  </g>
+</svg>

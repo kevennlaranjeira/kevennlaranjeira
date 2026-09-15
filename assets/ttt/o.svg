@@ -1,6 +1,0 @@
-<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="O">
-  <rect x="3" y="3" width="90" height="90" rx="16" fill="#11161d" stroke="#21262d" stroke-width="1.2" />
-  <circle cx="48" cy="48" r="19" stroke="#58a6ff" stroke-width="9" stroke-dasharray="119.4" transform="rotate(-90 48 48)">
-    <animate attributeName="stroke-dashoffset" values="119.4;0" dur="0.5s" />
-  </circle>
-</svg>

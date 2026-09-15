@@ -49,27 +49,11 @@ Aprendo melhor construindo. Pego a teoria, transformo em código, meço o result
 </div>
 <!-- PROFILE:LANG_STATS:END -->
 
-## Jogo da velha
+## Corrida de ordenação
 
-Você joga com X contra o bot. Clique numa casa livre e o GitHub abre uma issue já preenchida, aí é só confirmar. Em menos de um minuto o bot responde e o tabuleiro abaixo muda. A partida é coletiva, então quem chegar depois continua de onde você parou. O bot erra de vez em quando, dá para ganhar dele.
+Quatro algoritmos do meu [SortLab](https://github.com/kevennlaranjeira/SortLab) ordenando o mesmo vetor embaralhado. Na animação, cada comparação e cada troca levam o mesmo tempo, então a diferença entre O(n²) e O(n log n) aparece a olho nu.
 
-<div align="center">
-
-<!-- PROFILE:GAME:START -->
-<p><code>Partida #1 · sua vez, você joga com X</code></p>
-
-<table>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C1&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-1.svg" width="84" alt="casa 1 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C2&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-2.svg" width="84" alt="casa 2 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C3&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-3.svg" width="84" alt="casa 3 livre" /></a></td></tr>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C4&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-4.svg" width="84" alt="casa 4 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C5&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-5.svg" width="84" alt="casa 5 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C6&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-6.svg" width="84" alt="casa 6 livre" /></a></td></tr>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C7&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-7.svg" width="84" alt="casa 7 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C8&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-8.svg" width="84" alt="casa 8 livre" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C9&amp;body=Clique%20em%20%2A%2ACreate%2A%2A%20para%20enviar%20sua%20jogada.%20N%C3%A3o%20precisa%20escrever%20nada%20aqui.%0A%0AEm%20menos%20de%20um%20minuto%20o%20bot%20responde%20nesta%20issue%20e%20o%20tabuleiro%20do%20perfil%20muda."><img src="assets/ttt/empty-9.svg" width="84" alt="casa 9 livre" /></a></td></tr>
-</table>
-
-<p>Placar geral: visitantes <b>0</b> · bot <b>0</b> · empates <b>0</b></p>
-
-<p><sub>Ninguém entrou no ranking ainda.</sub></p>
-<!-- PROFILE:GAME:END -->
-
-</div>
+<a href="https://github.com/kevennlaranjeira/SortLab"><img src="assets/sorting-race.svg" width="100%" alt="Bubble sort, heap sort, merge sort e quick sort ordenando o mesmo vetor, lado a lado" /></a>
 
 ## Contribuições
 

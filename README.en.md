@@ -49,27 +49,11 @@ I learn best by building. I take the theory, turn it into code, measure the resu
 </div>
 <!-- PROFILE:LANG_STATS:END -->
 
-## Tic-tac-toe
+## Sorting race
 
-You play X against the bot. Click an empty cell and GitHub opens a pre-filled issue, then just submit it. In less than a minute the bot answers and the board below changes. The game is shared, so whoever comes next picks up where you left off. The bot slips up now and then, so you can beat it.
+Four algorithms from my [SortLab](https://github.com/kevennlaranjeira/SortLab) sorting the same shuffled array. In the animation every comparison and every swap takes the same time, so you can see the gap between O(n²) and O(n log n) with your own eyes.
 
-<div align="center">
-
-<!-- PROFILE:GAME:START -->
-<p><code>Game #1 · your turn, you play X</code></p>
-
-<table>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C1&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-1.svg" width="84" alt="cell 1 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C2&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-2.svg" width="84" alt="cell 2 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C3&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-3.svg" width="84" alt="cell 3 empty" /></a></td></tr>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C4&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-4.svg" width="84" alt="cell 4 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C5&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-5.svg" width="84" alt="cell 5 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C6&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-6.svg" width="84" alt="cell 6 empty" /></a></td></tr>
-  <tr><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C7&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-7.svg" width="84" alt="cell 7 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C8&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-8.svg" width="84" alt="cell 8 empty" /></a></td><td><a href="https://github.com/kevennlaranjeira/kevennlaranjeira/issues/new?title=ttt%7C9&amp;body=Click%20%2A%2ACreate%2A%2A%20to%20send%20your%20move.%20You%20don%27t%20need%20to%20write%20anything.%0A%0AIn%20less%20than%20a%20minute%20the%20bot%20answers%20here%20and%20the%20board%20on%20the%20profile%20changes."><img src="assets/ttt/empty-9.svg" width="84" alt="cell 9 empty" /></a></td></tr>
-</table>
-
-<p>Scoreboard: visitors <b>0</b> · bot <b>0</b> · draws <b>0</b></p>
-
-<p><sub>Nobody is on the leaderboard yet.</sub></p>
-<!-- PROFILE:GAME:END -->
-
-</div>
+<a href="https://github.com/kevennlaranjeira/SortLab"><img src="assets/sorting-race-en.svg" width="100%" alt="Bubble sort, heap sort, merge sort and quick sort sorting the same array side by side" /></a>
 
 ## Contributions
 

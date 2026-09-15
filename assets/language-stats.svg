@@ -1,118 +1,108 @@
-<svg width="920" height="370" viewBox="0 0 920 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Linguagens nos repositórios</title>
-  <desc id="desc">Métricas atualizadas automaticamente pela GitHub API</desc>
+<svg width="1000" height="400" viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linguagens: bytes de código nos repositórios públicos, via GitHub API">
+  <title>Linguagens: bytes de código nos repositórios públicos, via GitHub API</title>
   <defs>
-    <linearGradient id="card" x1="0" y1="0" x2="920" y2="370" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0d1117" />
-      <stop offset="1" stop-color="#111827" />
+    <pattern id="l-dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#1c232d" />
+    </pattern>
+    <pattern id="l-scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.018" />
+    </pattern>
+    <linearGradient id="l-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb950" />
+      <stop offset="1" stop-color="#58a6ff" />
     </linearGradient>
-    <linearGradient id="accent" x1="42" y1="64" x2="570" y2="64" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2ea043" />
-      <stop offset="1" stop-color="#1f6feb" />
-    </linearGradient>
-    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#010409" flood-opacity="0.45"/>
-    </filter>
-    <style>
-      .title { font: 700 26px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
-      .subtitle { font: 500 13px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
-      .section { font: 700 15px 'Segoe UI', Ubuntu, sans-serif; fill: #58a6ff; }
-      .lang-name { font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
-      .lang-percent { font: 700 13px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; text-anchor: end; }
-      .muted { font: 500 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
-      .metric-label { font: 600 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }
-      .metric-value { font: 800 17px 'Segoe UI', Ubuntu, sans-serif; fill: #f0f6fc; }
-      .footer { font: 500 11px 'Segoe UI', Ubuntu, sans-serif; fill: #6e7681; }
-    </style>
+    <style>@font-face{font-family:'Martian Mono';font-weight:400 700;src:url(data:font/woff2;base64,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) format('woff2');}@font-face{font-family:'Unbounded';font-weight:700 700;src:url(data:font/woff2;base64,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) format('woff2');}
+      .title { font: 700 24px 'Unbounded', 'Segoe UI', Ubuntu, sans-serif; fill: #e6edf3; }
+      .subtitle { font: 400 12px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #8b949e; }
+      .lang { font: 700 13px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #e6edf3; }
+      .percent { font: 700 13px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #e6edf3; }
+      .muted { font: 400 11px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #8b949e; }
+      .metric-label { font: 400 11px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #8b949e; }
+      .metric-value { font: 700 15px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #e6edf3; }
+      .metric-accent { font: 700 22px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #f0b429; }
+      .footer { font: 400 11px 'Martian Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; fill: #6e7681; }</style>
   </defs>
-  <rect width="920" height="370" rx="18" fill="url(#card)" />
-  <rect x="18" y="18" width="884" height="334" rx="14" fill="#0d1117" stroke="#30363d" filter="url(#softShadow)" />
-  <text x="42" y="52" class="title">Linguagens nos repositórios</text>
-  <text x="42" y="76" class="subtitle">Métricas atualizadas automaticamente pela GitHub API</text>
-  <rect x="42" y="91" width="520" height="3" rx="1.5" fill="url(#accent)" />
-  <text x="42" y="104" class="section">Linguagens</text>
-  <text x="630" y="104" class="section">Resumo</text>
+  <rect width="1000" height="400" rx="18" fill="#0b0f14" />
+  <rect width="1000" height="400" rx="18" fill="url(#l-dots)" />
+  <rect width="1000" height="400" rx="18" fill="url(#l-scan)" />
+  <rect x="0.5" y="0.5" width="999" height="399" rx="18" stroke="#21262d" />
+  <text x="40" y="56" class="title">Linguagens</text>
+  <text x="40" y="80" class="subtitle">bytes de código nos repositórios públicos, via GitHub API</text>
+  <rect x="40" y="94" width="580" height="2" rx="1" fill="url(#l-accent)"><animate attributeName="width" values="0;0;580" keyTimes="0;0.059;1" dur="0.85s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+  <rect x="650" y="96" width="310" height="240" rx="12" fill="#0d1117" stroke="#21262d" />
   
-  <g transform="translate(42 108)">
-    <circle cx="7" cy="7" r="5" fill="#b07219" />
-    <text x="22" y="11" class="lang-name">Java</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="91" height="12" rx="6" fill="#b07219" />
-    <text x="422" y="11" class="lang-percent">35.7%</text>
-    <text x="496" y="11" class="muted">41.307 bytes</text>
+  <g transform="translate(40 124)">
+    <circle cx="6" cy="7" r="5" fill="#b07219" />
+    <text x="22" y="12" class="lang">Java</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="111" height="10" rx="5" fill="#b07219"><animate attributeName="width" values="0;0;111" keyTimes="0;0.182;1" dur="1.10s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">35.7%</text>
+    <text x="548" y="12" class="muted">40,3 KB</text>
   </g>
-  <g transform="translate(42 136)">
-    <circle cx="7" cy="7" r="5" fill="#555555" />
-    <text x="22" y="11" class="lang-name">C</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="74" height="12" rx="6" fill="#555555" />
-    <text x="422" y="11" class="lang-percent">29.1%</text>
-    <text x="496" y="11" class="muted">33.624 bytes</text>
+  <g transform="translate(40 153)">
+    <circle cx="6" cy="7" r="5" fill="#555555" />
+    <text x="22" y="12" class="lang">C</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="90" height="10" rx="5" fill="#555555"><animate attributeName="width" values="0;0;90" keyTimes="0;0.237;1" dur="1.18s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">29.1%</text>
+    <text x="548" y="12" class="muted">32,8 KB</text>
   </g>
-  <g transform="translate(42 164)">
-    <circle cx="7" cy="7" r="5" fill="#3572A5" />
-    <text x="22" y="11" class="lang-name">Python</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="42" height="12" rx="6" fill="#3572A5" />
-    <text x="422" y="11" class="lang-percent">16.5%</text>
-    <text x="496" y="11" class="muted">19.088 bytes</text>
+  <g transform="translate(40 182)">
+    <circle cx="6" cy="7" r="5" fill="#3572A5" />
+    <text x="22" y="12" class="lang">Python</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="51" height="10" rx="5" fill="#3572A5"><animate attributeName="width" values="0;0;51" keyTimes="0;0.286;1" dur="1.26s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">16.5%</text>
+    <text x="548" y="12" class="muted">18,6 KB</text>
   </g>
-  <g transform="translate(42 192)">
-    <circle cx="7" cy="7" r="5" fill="#3178c6" />
-    <text x="22" y="11" class="lang-name">TypeScript</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="26" height="12" rx="6" fill="#3178c6" />
-    <text x="422" y="11" class="lang-percent">10.1%</text>
-    <text x="496" y="11" class="muted">11.687 bytes</text>
+  <g transform="translate(40 211)">
+    <circle cx="6" cy="7" r="5" fill="#3178c6" />
+    <text x="22" y="12" class="lang">TypeScript</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="31" height="10" rx="5" fill="#3178c6"><animate attributeName="width" values="0;0;31" keyTimes="0;0.328;1" dur="1.34s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">10.1%</text>
+    <text x="548" y="12" class="muted">11,4 KB</text>
   </g>
-  <g transform="translate(42 220)">
-    <circle cx="7" cy="7" r="5" fill="#563d7c" />
-    <text x="22" y="11" class="lang-name">CSS</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="11" height="12" rx="6" fill="#563d7c" />
-    <text x="422" y="11" class="lang-percent">4.3%</text>
-    <text x="496" y="11" class="muted">4.983 bytes</text>
+  <g transform="translate(40 240)">
+    <circle cx="6" cy="7" r="5" fill="#563d7c" />
+    <text x="22" y="12" class="lang">CSS</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="13" height="10" rx="5" fill="#563d7c"><animate attributeName="width" values="0;0;13" keyTimes="0;0.366;1" dur="1.42s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">4.3%</text>
+    <text x="548" y="12" class="muted">4,9 KB</text>
   </g>
-  <g transform="translate(42 248)">
-    <circle cx="7" cy="7" r="5" fill="#e34c26" />
-    <text x="22" y="11" class="lang-name">HTML</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="8" height="12" rx="6" fill="#e34c26" />
-    <text x="422" y="11" class="lang-percent">3.0%</text>
-    <text x="496" y="11" class="muted">3.522 bytes</text>
+  <g transform="translate(40 269)">
+    <circle cx="6" cy="7" r="5" fill="#e34c26" />
+    <text x="22" y="12" class="lang">HTML</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="9" height="10" rx="5" fill="#e34c26"><animate attributeName="width" values="0;0;9" keyTimes="0;0.400;1" dur="1.50s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">3.0%</text>
+    <text x="548" y="12" class="muted">3,4 KB</text>
   </g>
-  <g transform="translate(42 276)">
-    <circle cx="7" cy="7" r="5" fill="#384d54" />
-    <text x="22" y="11" class="lang-name">Dockerfile</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="5" height="12" rx="6" fill="#384d54" />
-    <text x="422" y="11" class="lang-percent">0.8%</text>
-    <text x="496" y="11" class="muted">914 bytes</text>
+  <g transform="translate(40 298)">
+    <circle cx="6" cy="7" r="5" fill="#384d54" />
+    <text x="22" y="12" class="lang">Dockerfile</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="6" height="10" rx="5" fill="#384d54"><animate attributeName="width" values="0;0;6" keyTimes="0;0.430;1" dur="1.58s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">0.8%</text>
+    <text x="548" y="12" class="muted">914 B</text>
   </g>
-  <g transform="translate(42 304)">
-    <circle cx="7" cy="7" r="5" fill="#427819" />
-    <text x="22" y="11" class="lang-name">Makefile</text>
-    <rect x="150" y="1" width="255" height="12" rx="6" fill="#263241" />
-    <rect x="150" y="1" width="5" height="12" rx="6" fill="#427819" />
-    <text x="422" y="11" class="lang-percent">0.4%</text>
-    <text x="496" y="11" class="muted">442 bytes</text>
+  <g transform="translate(40 327)">
+    <circle cx="6" cy="7" r="5" fill="#427819" />
+    <text x="22" y="12" class="lang">Makefile</text>
+    <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
+    <rect x="150" y="2" width="6" height="10" rx="5" fill="#427819"><animate attributeName="width" values="0;0;6" keyTimes="0;0.458;1" dur="1.66s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
+    <text x="530" y="12" class="percent" text-anchor="end">0.4%</text>
+    <text x="548" y="12" class="muted">442 B</text>
   </g>
   
-  <g transform="translate(630 121)">
-    <text x="0" y="0" class="metric-label">Commits públicos</text>
-    <text x="0" y="22" class="metric-value">13</text>
-  </g>
-  <g transform="translate(630 179)">
-    <text x="0" y="0" class="metric-label">Último commit</text>
-    <text x="0" y="22" class="metric-value">VotoDistribuido · 09/06/2026 17:4…</text>
-  </g>
-  <g transform="translate(630 237)">
-    <text x="0" y="0" class="metric-label">Repo mais recente</text>
-    <text x="0" y="22" class="metric-value">VotoDistribuido</text>
-  </g>
-  <g transform="translate(630 295)">
-    <text x="0" y="0" class="metric-label">Atualizado em</text>
-    <text x="0" y="22" class="metric-value">15/09/2026</text>
-  </g>
-  <text x="42" y="334" class="footer">A Action roda de hora em hora e também pode ser executada manualmente.</text>
+  <text x="680" y="124" class="metric-label">commits públicos</text>
+  <text x="680" y="148" class="metric-accent">13</text>
+  <text x="680" y="182" class="metric-label">último commit</text>
+  <text x="680" y="206" class="metric-value">09/06/2026 17:42 BRT</text>
+  <text x="680" y="240" class="metric-label">repo mais recente</text>
+  <text x="680" y="264" class="metric-value">VotoDistribuido</text>
+  <text x="680" y="298" class="metric-label">atualizado em</text>
+  <text x="680" y="322" class="metric-value">15/09/2026</text>
+  <text x="40" y="372" class="footer">// uma GitHub Action refaz este card de hora em hora</text>
 </svg>

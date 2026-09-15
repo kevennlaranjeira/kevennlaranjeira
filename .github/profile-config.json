@@ -4,6 +4,21 @@
   "selectionMode": "auto",
   "featuredRepos": [],
   "excludeRepos": [
-    "kevennlaranjeira"
-  ]
+    "kevennlaranjeira",
+    "botcontribui-o"
+  ],
+  "descriptions": {
+    "VotoDistribuido": {
+      "pt": "Sistema de votação dividido em serviços independentes: entrada de votos, apuração, mensageria e interface web, tudo em Docker.",
+      "en": "Voting system split into independent services for vote intake, tallying, messaging and the web interface, all on Docker."
+    },
+    "SortLab": {
+      "pt": "Laboratório em C que gera entradas, roda nove algoritmos de ordenação e registra a saída e o tempo de execução de cada um.",
+      "en": "C lab that generates inputs, runs nine sorting algorithms and records the output and running time of each one."
+    },
+    "projeto_pdi": {
+      "pt": "Aplicação desktop em Python para processamento de imagens: histograma, filtros espaciais, Fourier, morfologia e segmentação por Otsu.",
+      "en": "Python desktop app for image processing: histograms, spatial filters, Fourier, morphology and Otsu segmentation."
+    }
+  }
 }

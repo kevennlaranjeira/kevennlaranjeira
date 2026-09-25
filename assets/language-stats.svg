@@ -103,6 +103,6 @@
   <text x="680" y="240" class="metric-label">repo mais recente</text>
   <text x="680" y="264" class="metric-value">VotoDistribuido</text>
   <text x="680" y="298" class="metric-label">atualizado em</text>
-  <text x="680" y="322" class="metric-value">24/09/2026</text>
+  <text x="680" y="322" class="metric-value">25/09/2026</text>
   <text x="40" y="372" class="footer">// uma GitHub Action refaz este card de hora em hora</text>
 </svg>

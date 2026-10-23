@@ -282,7 +282,8 @@ def render_badges(username: str, public_repos: int, locale: str) -> str:
     updated_badge = badge_url(updated_label, today, "1f6feb", "githubactions")
     return "\n".join(
         [
-            f"[![Profile views](https://komarev.com/ghpvc/?username={username}&color=3fb950&style=for-the-badge&label={urllib.parse.quote(views_label, safe='')})](https://github.com/{username})",
+            # komarev.com started answering GitHub's image proxy with 404, so views come from hits.sh
+            f"[![{views_label.title()}](https://hits.sh/github.com/{username}.svg?style=for-the-badge&label={urllib.parse.quote(views_label, safe='')}&color=3fb950&labelColor=161b22)](https://github.com/{username})",
             f"[![GitHub followers](https://img.shields.io/github/followers/{username}?style=for-the-badge&logo=github&label={urllib.parse.quote(followers_label, safe='')}&color=2ea043&labelColor=161b22)](https://github.com/{username}?tab=followers)",
             f"[![GitHub repos]({repo_badge})](https://github.com/{username}?tab=repositories)",
             f"[![{updated_label}]({updated_badge})](https://github.com/{username}/{username}/actions)",

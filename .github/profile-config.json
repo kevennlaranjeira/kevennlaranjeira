@@ -1,6 +1,6 @@
 {
   "username": "kevennlaranjeira",
-  "maxProjects": 3,
+  "maxProjects": 4,
   "selectionMode": "auto",
   "featuredRepos": [],
   "excludeRepos": [
@@ -19,6 +19,10 @@
     "projeto_pdi": {
       "pt": "Aplicação desktop em Python para processamento de imagens: histograma, filtros espaciais, Fourier, morfologia e segmentação por Otsu.",
       "en": "Python desktop app for image processing: histograms, spatial filters, Fourier, morphology and Otsu segmentation."
+    },
+    "OLAP2026": {
+      "pt": "Data warehouse com dados abertos da educação municipal de São Paulo: ETL em Python e DuckDB, esquema estrela e OLAP.",
+      "en": "Data warehouse built on open data from São Paulo's municipal schools: Python and DuckDB pipeline, star schema and OLAP queries."
     }
   }
 }

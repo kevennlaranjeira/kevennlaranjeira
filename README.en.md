@@ -9,9 +9,9 @@
 <img src="assets/header-en.svg" width="100%" alt="Kevenn Laranjeira de Oliveira, master's student in Computer Science and researcher at USP" />
 
 <!-- PROFILE:BADGES:START -->
-[![Profile views](https://komarev.com/ghpvc/?username=kevennlaranjeira&color=3fb950&style=for-the-badge&label=VIEWS)](https://github.com/kevennlaranjeira)
+[![Views](https://hits.sh/github.com/kevennlaranjeira.svg?style=for-the-badge&label=VIEWS&color=3fb950&labelColor=161b22)](https://github.com/kevennlaranjeira)
 [![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Followers&color=2ea043&labelColor=161b22)](https://github.com/kevennlaranjeira?tab=followers)
-[![GitHub repos](https://img.shields.io/badge/Public%20repositories-4-d29922?style=for-the-badge&labelColor=161b22&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
+[![GitHub repos](https://img.shields.io/badge/Public%20repositories-5-d29922?style=for-the-badge&labelColor=161b22&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
 [![Updated](https://img.shields.io/badge/Updated-23%2F10%2F2026-1f6feb?style=for-the-badge&labelColor=161b22&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
 <!-- PROFILE:BADGES:END -->
 
@@ -23,7 +23,7 @@
 
 I'm a master's student in Computer Science and a researcher at USP, in São Carlos, Brazil. Before that I got my bachelor's degree in Information Systems at the Federal University of Viçosa (UFV).
 
-I learn best by building. I take the theory, turn it into code, measure the result and keep adjusting until the solution is clear to whoever comes next. The public repositories here include a voting system in Java and TypeScript running on Docker, a C lab for sorting algorithms and a Python app for image processing.
+I learn best by building. I take the theory, turn it into code, measure the result and keep adjusting until the solution is clear to whoever comes next. The public repositories here include a data warehouse built on São Paulo's open education data with Python and DuckDB, and a voting system in Java and TypeScript running on Docker. There's also a C lab for sorting algorithms and a Python app for image processing.
 
 ## Tech stack
 
@@ -34,6 +34,7 @@ I learn best by building. I take the theory, turn it into code, measure the resu
 <!-- PROFILE:PROJECTS:START -->
 <div align="center">
 
+<a href="https://github.com/kevennlaranjeira/OLAP2026"><img src="assets/projects/OLAP2026-en.svg" width="48%" alt="OLAP2026" /></a>
 <a href="https://github.com/kevennlaranjeira/VotoDistribuido"><img src="assets/projects/VotoDistribuido-en.svg" width="48%" alt="VotoDistribuido" /></a>
 <a href="https://github.com/kevennlaranjeira/SortLab"><img src="assets/projects/SortLab-en.svg" width="48%" alt="SortLab" /></a>
 <a href="https://github.com/kevennlaranjeira/projeto_pdi"><img src="assets/projects/projeto_pdi-en.svg" width="48%" alt="projeto_pdi" /></a>
@@ -49,11 +50,21 @@ I learn best by building. I take the theory, turn it into code, measure the resu
 </div>
 <!-- PROFILE:LANG_STATS:END -->
 
-## Sorting race
+## Projects in motion
 
-Four algorithms from my [SortLab](https://github.com/kevennlaranjeira/SortLab) sorting the same shuffled array. In the animation every comparison and every swap takes the same time, so you can see the gap between O(n²) and O(n log n) with your own eyes.
+Three of my projects, animated. The architecture, the algorithms and the filter follow what is in each repository.
+
+In [VotoDistribuido](https://github.com/kevennlaranjeira/VotoDistribuido), each vote goes through the load balancer, lands on one of three collector replicas and waits in the RabbitMQ queue until the aggregator consumes it. The result goes back to the screen over WebSocket.
+
+<a href="https://github.com/kevennlaranjeira/VotoDistribuido"><img src="assets/vote-flow-en.svg" width="100%" alt="Votes leaving the browser and going through nginx-proxy, three collector replicas and the RabbitMQ queue to the aggregator, with results pushed over WebSocket" /></a>
+
+In [SortLab](https://github.com/kevennlaranjeira/SortLab), four algorithms sort the same shuffled array. Every comparison and every swap takes the same time in the animation, so the gap between O(n²) and O(n log n) is easy to see.
 
 <a href="https://github.com/kevennlaranjeira/SortLab"><img src="assets/sorting-race-en.svg" width="100%" alt="Bubble sort, heap sort, merge sort and quick sort sorting the same array side by side" /></a>
+
+In [projeto_pdi](https://github.com/kevennlaranjeira/projeto_pdi), the Sobel filter sweeps the image with a 3×3 window and highlights the edges. The edges on the right were computed pixel by pixel from the image on the left.
+
+<a href="https://github.com/kevennlaranjeira/projeto_pdi"><img src="assets/sobel-en.svg" width="100%" alt="A 3×3 window sweeping a small image while the edges found by the Sobel filter appear beside it" /></a>
 
 ## Contributions
 

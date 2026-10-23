@@ -131,3 +131,20 @@ def discrete_keytimes(points: list[tuple[float, float]], total: float) -> tuple[
     values = ";".join(f"{value:g}" for _, value in cleaned)
     key_times = ";".join(f"{time / total:.4f}" for time, _ in cleaned)
     return values, key_times
+
+
+def linear_keyframes(points: list[tuple[float, float]], total: float) -> tuple[str, str]:
+    cleaned: list[tuple[float, float]] = []
+    if points[0][0] > 0:
+        points = [(0.0, points[0][1]), *points]
+    for time, value in points:
+        if cleaned and time <= cleaned[-1][0]:
+            if value == cleaned[-1][1]:
+                continue
+            time = cleaned[-1][0] + 0.001
+        cleaned.append((time, value))
+    if cleaned[-1][0] < total:
+        cleaned.append((total, cleaned[-1][1]))
+    values = ";".join(f"{value:g}" for _, value in cleaned)
+    key_times = ";".join(f"{time / total:.5f}" for time, _ in cleaned)
+    return values, key_times

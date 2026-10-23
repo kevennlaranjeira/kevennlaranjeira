@@ -23,9 +23,11 @@ from svg_kit import (
     discrete_keytimes,
     esc,
     fonts_for,
+    linear_keyframes,
     mono_width,
     svg_document,
 )
+from motion_cards import render_sobel, render_vote_flow
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
@@ -659,21 +661,6 @@ def run_trace(values: list[int], events: list[tuple], start: float) -> tuple[dic
     return tracks, flashes, moment, operations
 
 
-def linear_keyframes(points: list[tuple[float, float]], total: float) -> tuple[str, str]:
-    cleaned: list[tuple[float, float]] = []
-    for time, value in points:
-        if cleaned and time <= cleaned[-1][0]:
-            if value == cleaned[-1][1]:
-                continue
-            time = cleaned[-1][0] + 0.001
-        cleaned.append((time, value))
-    if cleaned[-1][0] < total:
-        cleaned.append((total, cleaned[-1][1]))
-    values = ";".join(f"{value:g}" for _, value in cleaned)
-    key_times = ";".join(f"{time / total:.5f}" for time, _ in cleaned)
-    return values, key_times
-
-
 def bar_color(value: int, count: int) -> str:
     start = (0x3F, 0xB9, 0x50)
     end = (0x58, 0xA6, 0xFF)
@@ -778,6 +765,8 @@ def main() -> None:
         (ASSETS / f"terminal{suffix(locale)}.svg").write_text(render_terminal(locale), encoding="utf-8", newline="\n")
         (ASSETS / f"stack{suffix(locale)}.svg").write_text(render_stack(locale), encoding="utf-8", newline="\n")
         (ASSETS / f"sorting-race{suffix(locale)}.svg").write_text(render_sorting_race(locale), encoding="utf-8", newline="\n")
+        (ASSETS / f"vote-flow{suffix(locale)}.svg").write_text(render_vote_flow(locale), encoding="utf-8", newline="\n")
+        (ASSETS / f"sobel{suffix(locale)}.svg").write_text(render_sobel(locale), encoding="utf-8", newline="\n")
     (ASSETS / "footer.svg").write_text(render_footer(), encoding="utf-8", newline="\n")
 
 

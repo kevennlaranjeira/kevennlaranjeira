@@ -12,7 +12,7 @@
 [![Visitas](https://hits.sh/github.com/kevennlaranjeira.svg?style=for-the-badge&label=VISITAS&color=3fb950&labelColor=161b22)](https://github.com/kevennlaranjeira)
 [![GitHub followers](https://img.shields.io/github/followers/kevennlaranjeira?style=for-the-badge&logo=github&label=Seguidores&color=2ea043&labelColor=161b22)](https://github.com/kevennlaranjeira?tab=followers)
 [![GitHub repos](https://img.shields.io/badge/Reposit%C3%B3rios%20p%C3%BAblicos-5-d29922?style=for-the-badge&labelColor=161b22&logo=github&logoColor=white)](https://github.com/kevennlaranjeira?tab=repositories)
-[![Atualizado](https://img.shields.io/badge/Atualizado-27%2F10%2F2026-1f6feb?style=for-the-badge&labelColor=161b22&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
+[![Atualizado](https://img.shields.io/badge/Atualizado-28%2F10%2F2026-1f6feb?style=for-the-badge&labelColor=161b22&logo=githubactions&logoColor=white)](https://github.com/kevennlaranjeira/kevennlaranjeira/actions)
 <!-- PROFILE:BADGES:END -->
 
 </div>

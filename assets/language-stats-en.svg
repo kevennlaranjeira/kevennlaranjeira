@@ -36,8 +36,8 @@
     <text x="22" y="12" class="lang">Python</text>
     <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
     <rect x="150" y="2" width="241" height="10" rx="5" fill="#3572A5"><animate attributeName="width" values="0;0;241" keyTimes="0;0.182;1" dur="1.10s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
-    <text x="530" y="12" class="percent" text-anchor="end">77.7%</text>
-    <text x="548" y="12" class="muted">328.6 KB</text>
+    <text x="530" y="12" class="percent" text-anchor="end">77.8%</text>
+    <text x="548" y="12" class="muted">329.5 KB</text>
   </g>
   <g transform="translate(40 153)">
     <circle cx="6" cy="7" r="5" fill="#b07219" />
@@ -52,7 +52,7 @@
     <text x="22" y="12" class="lang">C</text>
     <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
     <rect x="150" y="2" width="24" height="10" rx="5" fill="#555555"><animate attributeName="width" values="0;0;24" keyTimes="0;0.286;1" dur="1.26s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
-    <text x="530" y="12" class="percent" text-anchor="end">7.8%</text>
+    <text x="530" y="12" class="percent" text-anchor="end">7.7%</text>
     <text x="548" y="12" class="muted">32.8 KB</text>
   </g>
   <g transform="translate(40 211)">
@@ -68,7 +68,7 @@
     <text x="22" y="12" class="lang">CSS</text>
     <rect x="150" y="2" width="310" height="10" rx="5" fill="#1c232d" />
     <rect x="150" y="2" width="6" height="10" rx="5" fill="#563d7c"><animate attributeName="width" values="0;0;6" keyTimes="0;0.366;1" dur="1.42s" calcMode="spline" keySplines="0 0 1 1;0.2 0.8 0.2 1" /></rect>
-    <text x="530" y="12" class="percent" text-anchor="end">1.2%</text>
+    <text x="530" y="12" class="percent" text-anchor="end">1.1%</text>
     <text x="548" y="12" class="muted">4.9 KB</text>
   </g>
   <g transform="translate(40 269)">
@@ -97,12 +97,12 @@
   </g>
   
   <text x="680" y="124" class="metric-label">public commits</text>
-  <text x="680" y="148" class="metric-accent">53</text>
+  <text x="680" y="148" class="metric-accent">59</text>
   <text x="680" y="182" class="metric-label">latest commit</text>
-  <text x="680" y="206" class="metric-value">27/10/2026 16:04 BRT</text>
+  <text x="680" y="206" class="metric-value">27/10/2026 23:09 BRT</text>
   <text x="680" y="240" class="metric-label">latest repo</text>
   <text x="680" y="264" class="metric-value">OLAP2026</text>
   <text x="680" y="298" class="metric-label">updated at</text>
-  <text x="680" y="322" class="metric-value">27/10/2026</text>
+  <text x="680" y="322" class="metric-value">28/10/2026</text>
   <text x="40" y="372" class="footer">// a GitHub Action rebuilds this card every hour</text>
 </svg>

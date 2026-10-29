@@ -97,9 +97,9 @@
   </g>
   
   <text x="680" y="124" class="metric-label">commits públicos</text>
-  <text x="680" y="148" class="metric-accent">61</text>
+  <text x="680" y="148" class="metric-accent">69</text>
   <text x="680" y="182" class="metric-label">último commit</text>
-  <text x="680" y="206" class="metric-value">28/10/2026 23:45 BRT</text>
+  <text x="680" y="206" class="metric-value">29/10/2026 13:26 BRT</text>
   <text x="680" y="240" class="metric-label">repo mais recente</text>
   <text x="680" y="264" class="metric-value">OLAP2026</text>
   <text x="680" y="298" class="metric-label">atualizado em</text>
